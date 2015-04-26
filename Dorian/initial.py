@@ -11,7 +11,15 @@ soup = BeautifulSoup(open("../speyer-192-20-hackathon.xml"), from_encoding="utf-
 # print date.contents[5]
 
 # for date 
-print len(soup.findAll("daoloc"))
+# print len(soup.findAll("daoloc"))
 
 # for bild in soup.findAll("bild"):
 # 	print bild.contents[0].strip().encode('utf-8')
+
+# for c in soup.findAll("c"):
+# 	print c.contents[1].encode('utf-8')
+
+
+
+# for link in soup.findAll("daoloc"):
+# 	print(link.get('href'))
