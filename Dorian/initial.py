@@ -1,7 +1,7 @@
 from lxml import etree
 from bs4 import BeautifulSoup
 
-soup = BeautifulSoup(open("../spey_simple.xml"), from_encoding="utf-8")
+soup = BeautifulSoup(open("../speyer-192-20-hackathon.xml"), from_encoding="utf-8")
 
 # date = soup.findAll	("unitdate")
 
@@ -11,6 +11,7 @@ soup = BeautifulSoup(open("../spey_simple.xml"), from_encoding="utf-8")
 # print date.contents[5]
 
 # for date 
+print len(soup.findAll("daoloc"))
 
-for bild in soup.findAll("bild"):
-	print "".join(bild.contents).encode('utf-8')
+# for bild in soup.findAll("bild"):
+# 	print bild.contents[0].strip().encode('utf-8')
