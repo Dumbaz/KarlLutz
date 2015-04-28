@@ -1,6 +1,6 @@
 from lxml import etree
 
-tree = etree.parse('../192-20.xml')
+tree = etree.parse('192-20.xml')
 root = tree.getroot()
 
 r = root.xpath('//archdesc/dsc/c/c')
