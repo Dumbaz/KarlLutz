@@ -45,6 +45,10 @@
 
 		});
 
+		function weight (d) {
+
+		}
+
 		function make () {
 			
 			var svg = d3.select( "body" ).append( "svg" )
@@ -54,6 +58,12 @@
 			var works = svg.append( "g" )
 				.attr( "id", "works")
 				.attr( "transform", "translate( 0, 100 ) ");
+
+			worksData = d3.nest()
+				.key( function(d) {
+					return d.unitdate;
+				})
+				.entries( dataset );
 
 			works.selectAll ( "g.work" ).data( dataset )
 				.enter()
@@ -65,6 +75,11 @@
 
 					return "translate( " + x + ", 0 )";
 				})
+			.append("img")
+				.attr("src", function(d){
+					return JSON.parse(d.links)[0];
+				})
+
 			.append( "circle" )
 				.attr( "r", 5);
 
