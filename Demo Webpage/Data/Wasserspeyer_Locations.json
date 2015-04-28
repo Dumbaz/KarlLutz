@@ -1,0 +1,310 @@
+[
+    {
+        "name": "Kotelnikovo",
+        "alternativeName": ["Kotelnikowo"],
+        "country": "Rußland",
+        "longitude": 43.146111,
+        "latitude": 47.631667
+    },
+    {
+        "name": "Dnepropetrowsk",
+        "alternativeName": [],
+        "country": "Ukraine",
+        "longitude": 35.046183,
+        "latitude": 48.464717
+    },
+    {
+        "name": "Winniza",
+        "alternativeName": ["Winnyzja"],
+        "country": "Ukraine",
+        "longitude": 28.468217,
+        "latitude": 49.233083
+    },
+    {
+        "name": "Petrowka",
+        "alternativeName": ["Kiew"],
+        "country": "Ukraine",
+        "longitude": 30.497851,
+        "latitude": 50.486078
+    },
+    {
+        "name": "Guilia",
+        "alternativeName": [],
+        "country": "Italien",
+        "longitude": 10.66666669999995,
+        "latitude": 44.3833333
+    },
+    {
+        "name": "Taganrog",
+        "alternativeName": [],
+        "country": "Rußland",
+        "longitude": 38.916667,
+        "latitude": 47.216667
+    },
+    {
+        "name": "Schachty",
+        "alternativeName": [],
+        "country": "Rußland",
+        "longitude": 40.233333,
+        "latitude": 47.7
+    },
+    {
+        "name": "Poltawa",
+        "alternativeName": ["Poltava"],
+        "country": "Ukraine",
+        "longitude": 34.551417,
+        "latitude": 49.588267
+    },
+    {
+        "name": "Nowo Archangelsk",
+        "alternativeName": ["Nikolajew","Mykolajiw"],
+        "country": "Ukraine",
+        "longitude": 31.994583,
+        "latitude": 46.975033
+    },
+    {
+        "name": "Nowo Ukrainka",
+        "alternativeName": [],
+        "country": "Ukraine",
+        "longitude": 31.3647199,
+        "latitude": 48.2967002
+    },
+    {
+        "name": "Kirograd",
+        "alternativeName": ["Kirowohrad"],
+        "country": "Ukraine",
+        "longitude": 32.262317,
+        "latitude": 48.507933
+    },
+    {
+        "name": "Uman",
+        "alternativeName": [],
+        "country": "Ukraine",
+        "longitude": 30.216667,
+        "latitude": 48.75
+    },
+    {
+        "name": "Pozeworsk",
+        "alternativeName": ["Przeworsk"],
+        "country": "Polen",
+        "longitude": 22.5013596,
+        "latitude": 50.0546399
+    },
+    {
+        "name": "Kurowice",
+        "alternativeName": [],
+        "country": "Polen",
+        "longitude": 19.6834088,
+        "latitude": 51.6708412
+    },
+    {
+        "name": "Grodek",
+        "alternativeName": [],
+        "country": "Polen",
+        "longitude": 23.6595153,
+        "latitude": 53.0955034
+    },
+    {
+        "name": "Brennero",
+        "alternativeName": [],
+        "country": "Italien",
+        "longitude": 11.3881342,
+        "latitude": 46.9498198
+    },
+    {
+        "name": "Venedig",
+        "alternativeName": [],
+        "country": "Italien",
+        "longitude": 12.3155151,
+        "latitude": 45.4408474
+    },
+    {
+        "name": "Oetz",
+        "alternativeName": [],
+        "country": "Österreich",
+        "longitude": 10.8965975,
+        "latitude": 47.2031962
+    },
+    {
+        "name": "Besenzano",
+        "alternativeName": ["Desenzano"],
+        "country": "Italien",
+        "longitude": 10.5333351,
+        "latitude": 45.4714531
+    },
+    {
+        "name": "Brescia",
+        "alternativeName": [],
+        "country": "Italien",
+        "longitude": 10.2118019,
+        "latitude": 45.5415526
+    },
+    {
+        "name": "Lago d'Iseo",
+        "alternativeName": [],
+        "country": "Italien",
+        "longitude": 10.0670398,
+        "latitude": 45.721871
+    },
+    {
+        "name": "Sirmione",
+        "alternativeName": [],
+        "country": "Italien",
+        "longitude": 10.6053754,
+        "latitude": 45.4969717
+    },
+    {
+        "name": "Wiliczka",
+        "alternativeName": [],
+        "country": "Polen",
+        "longitude": 20.0647971,
+        "latitude": 49.9870619
+    },
+    {
+        "name": "Warschau",
+        "alternativeName": [],
+        "country": "Polen",
+        "longitude": 21.0122287,
+        "latitude": 52.2296756
+    },
+    {
+        "name": "Brazlaw",
+        "alternativeName": [],
+        "country": "Ukraine",
+        "longitude": 28.9461989,
+        "latitude": 48.8162706
+    },
+    {
+        "name": "Pawlograd",
+        "alternativeName": [],
+        "country": "Ukraine",
+        "longitude": 35.866667,
+        "latitude": 48.516667
+    },
+    {
+        "name": "Florenz",
+        "alternativeName": [],
+        "country": "Italien",
+        "longitude": 11.2558136,
+        "latitude": 43.7695604
+    },
+    {
+        "name": "Paris",
+        "alternativeName": [],
+        "country": "Frankreich",
+        "longitude": 2.3522219,
+        "latitude": 48.856614
+    },
+    {
+        "name": "Krakau",
+        "alternativeName": [],
+        "country": "Polen",
+        "longitude": 19.9449799,
+        "latitude": 50.0646501
+    },
+    {
+        "name": "Rostow",
+        "alternativeName": [],
+        "country": "Rußland",
+        "longitude": 39.7,
+        "latitude": 47.233333
+    },
+    {
+        "name": "Modena",
+        "alternativeName": [],
+        "country": "Italien",
+        "longitude": 10.918048,
+        "latitude": 44.5513799
+    },
+    {
+        "name": "Bologna Vignola",
+        "alternativeName": [],
+        "country": "Italien",
+        "longitude": 11.0131217,
+        "latitude": 44.4835861
+    },
+    {
+        "name": "Bologna Vignola",
+        "alternativeName": [],
+        "country": "Italien",
+        "longitude": 11.0131217,
+        "latitude": 44.4835861
+    },
+    {
+        "name": "Zoporosje",
+        "alternativeName": ["Saporischschja"],
+        "country": "Ukraine",
+        "longitude": 35.139567,
+        "latitude": 47.8388
+    },
+    {
+        "name": "Dnjepropetrowsk",
+        "alternativeName": [],
+        "country": "Ukraine",
+        "longitude": 35.046183,
+        "latitude": 48.464717
+    },
+    {
+        "name": "Taganrog Haring",
+        "alternativeName": ["Taganrog"],
+        "country": "Rußland",
+        "longitude": 38.916667,
+        "latitude": 47.216667
+    },
+    {
+        "name": "Chortitza",
+        "alternativeName": ["Kolonie Chortitza","Chortyzja", "Chortiza","Saporischschja"],
+        "country": "Ukraine",
+        "longitude": 35.139567,
+        "latitude": 47.8388
+    },
+    {
+        "name": "Dnjepr",
+        "alternativeName": [],
+        "country": "Ukraine",
+        "longitude": 32.6080941,
+        "latitude": 51.1791974
+    },
+    {
+        "name": "Grischino",
+        "alternativeName": ["Krasnoarmijsk","Postyschewo","Rollbahn Süd"],
+        "country": "Ukraine",
+        "longitude": 37.182778,
+        "latitude": 48.282778
+    },
+    {
+        "name": "Nowonoskowsk",
+        "alternativeName": [],
+        "country": "Ukraine",
+        "longitude": 38.2963063,
+        "latitude": 54.0109034
+    },
+    {
+        "name": "Powiograd",
+        "alternativeName": ["Pawlograd","Pawlohrad"],
+        "country": "Ukraine",
+        "longitude": 35.866667,
+        "latitude": 48.516667
+    },
+    {
+        "name": "Krasnograd",
+        "alternativeName": ["Krasnohrad"],
+        "country": "Ukraine",
+        "longitude": 35.45,
+        "latitude": 49.366667
+    },
+    {
+        "name": "Orel",
+        "alternativeName": [""],
+        "country": "Ukraine",
+        "longitude": 36.0624898,
+        "latitude": 52.9668468
+    },
+    {
+        "name": "Kirowograd",
+        "alternativeName": [""],
+        "country": "Ukraine",
+        "longitude": 33.6541853,
+        "latitude": 49.0942164
+    }
+]
