@@ -6,3 +6,6 @@ linklist currently contains about 2000 direct links to the images hosted on flic
 normalized dates contains the normalized dd.MM.yyyy dates of the <c objects from the xml, which may contain from 1-many pictures
 
 Data from XML can be found as .csv and .json
+
+
+JSON is hosted on http://davinci.dumbaz.de/192-20.json
