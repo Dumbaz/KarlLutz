@@ -7,6 +7,10 @@
 
 	<style type="text/css">
 
+		circle {
+			opacity: 0.2;
+		}
+
 	</style>
 
 </head>
@@ -23,11 +27,19 @@
 	
 	<script type="text/javascript">
 
-		var dataset;
+		var dataset,
+			yearScale = d3.scale.linear()
+				.domain( [1910, 1946])
+				.range( [0, 800]);
 
 		d3.csv("192-20.csv", function( data ) {
 
 			dataset = data;
+
+			for (var i = 0; i < dataset.length; i++) {
+				dataset[i].unitdate = parseInt(dataset[i].unitdate) || 1940;
+
+			}
 
 			make();
 
@@ -39,6 +51,23 @@
 				.attr( "width", 800 )
 				.attr( "height", 600 );
 				
+			var works = svg.append( "g" )
+				.attr( "id", "works")
+				.attr( "transform", "translate( 0, 100 ) ");
+
+			works.selectAll ( "g.work" ).data( dataset )
+				.enter()
+			.append( "g" )
+				.attr( "class", "work")
+				.attr( "transform", function( d) {
+
+					var x = yearScale( d.unitdate );
+
+					return "translate( " + x + ", 0 )";
+				})
+			.append( "circle" )
+				.attr( "r", 5);
+
 		}
 
 
