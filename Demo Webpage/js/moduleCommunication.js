@@ -7,8 +7,7 @@ window.onload = function() {
 	async.parallel([
 
 		function(callback) {
-			parseLocations(function(parsedLocations) {
-				console.log('callback' + parsedLocations.length);				
+			parseLocations(function(parsedLocations) {		
 				callback(null, parsedLocations);
 			})
 		},
@@ -20,7 +19,7 @@ window.onload = function() {
 
 	],function(error, results) {
 
-		console.log('callback 2' + results[0].length + " test " + results[1].length);				
+		console.log('locations' + results[0].length + " photoSets " + results[1].length);				
 		locations = results[0];
 		photoSets = results[1];
 
@@ -63,7 +62,12 @@ function parseLocations(callback) {
 function parsePhotoSets(callback) {
 
   $.getJSON("./Data/192-20.json", function( data ) {
-    console.log("parsed number of photosets " + data.length);
+    console.log("parsed number of photosets " + data);
+
+    for (var photoset in data) {
+    	console.log(photoset.links);
+    }
+
     callback(data);
   })
   .error(function(jqXHR, textStatus, errorThrown) {
