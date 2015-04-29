@@ -1,23 +1,9 @@
-window.onload = openMap; 
-
 var locations = [];
 var map;
 
-function parseLocations(callback) {
+function initMap(parsedLocations) { 
 
-  $.getJSON("./Data/Wasserspeyer_Locations.json", function( data ) {
-    locations = data;
-    console.log("parsed number of locations " + locations.length);
-    callback();
-  })
-  .error(function(jqXHR, textStatus, errorThrown) {
-      console.log("error " + textStatus);
-      console.log("incoming Text " + jqXHR.responseText);
-  });
-
-}
-
-function openMap() { 
+  locations = parsedLocations;
 
   map = L.map('map').setView([49.3208300, 8.4311100], 6);
   var marker = L.marker([49.3208300, 8.4311100]).addTo(map);
@@ -46,11 +32,9 @@ function openMap() {
 
   standardTileLayer.addTo(map);
 
-  parseLocations(function(){
-
-    addMarkerToMap();
-
-  });
+  console.log("markes" + parsedLocations.length);
+    
+  addMarkerToMap();
 
 }
 

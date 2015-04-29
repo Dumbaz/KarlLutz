@@ -8,7 +8,7 @@
     },
     {
         "name": "Dnepropetrowsk",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Ukraine",
         "latitude": 48.464717,
         "longitude": 35.046183        
@@ -29,21 +29,21 @@
     },
     {
         "name": "Guilia",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Italien",
         "latitude": 44.3833333,
         "longitude": 10.66666669999995        
     },
     {
         "name": "Taganrog",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Rußland",
         "latitude": 47.216667,
         "longitude": 38.916667        
     },
     {
         "name": "Schachty",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Rußland",
         "latitude": 47.7,
         "longitude": 40.233333        
@@ -64,7 +64,7 @@
     },
     {
         "name": "Nowo Ukrainka",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Ukraine",
         "latitude": 48.2967002,
         "longitude": 31.3647199        
@@ -78,7 +78,7 @@
     },
     {
         "name": "Uman",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Ukraine",
         "latitude": 48.75,
         "longitude": 30.216667        
@@ -92,35 +92,35 @@
     },
     {
         "name": "Kurowice",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Polen",
         "latitude": 51.6708412,
         "longitude": 19.6834088        
     },
     {
         "name": "Grodek",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Polen",
         "latitude": 53.0955034,
         "longitude": 23.6595153        
     },
     {
         "name": "Brennero",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Italien",
         "latitude": 46.9498198,
         "longitude": 11.3881342        
     },
     {
         "name": "Venedig",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Italien",
         "latitude": 45.4408474,
         "longitude": 12.3155151        
     },
     {
         "name": "Oetz",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Österreich",
         "latitude": 47.2031962,
         "longitude": 10.8965975        
@@ -134,98 +134,98 @@
     },
     {
         "name": "Brescia",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Italien",
         "latitude": 45.5415526,
         "longitude": 10.2118019        
     },
     {
         "name": "Lago d'Iseo",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Italien",
         "latitude": 45.721871,
         "longitude": 10.0670398        
     },
     {
         "name": "Sirmione",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Italien",
         "latitude": 45.4969717,
         "longitude": 10.6053754        
     },
     {
         "name": "Wiliczka",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Polen",
         "latitude": 49.9870619,
         "longitude": 20.0647971        
     },
     {
         "name": "Warschau",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Polen",
         "latitude": 52.2296756,
         "longitude": 21.0122287        
     },
     {
         "name": "Brazlaw",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Ukraine",
         "latitude": 48.8162706,
         "longitude": 28.9461989        
     },
     {
         "name": "Pawlograd",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Ukraine",
         "latitude": 48.516667,
         "longitude": 35.866667        
     },
     {
         "name": "Florenz",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Italien",
         "latitude": 43.7695604,
         "longitude": 11.2558136        
     },
     {
         "name": "Paris",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Frankreich",
         "latitude": 48.856614,
         "longitude": 2.3522219        
     },
     {
         "name": "Krakau",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Polen",
         "latitude": 50.0646501,
         "longitude": 19.9449799        
     },
     {
         "name": "Rostow",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Rußland",
         "latitude": 47.233333,
         "longitude": 39.7        
     },
     {
         "name": "Modena",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Italien",
         "latitude": 44.5513799,
         "longitude": 10.918048        
     },
     {
         "name": "Bologna Vignola",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Italien",
         "latitude": 44.4835861,
         "longitude": 11.0131217        
     },
     {
         "name": "Bologna Vignola",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Italien",
         "latitude": 44.4835861,
         "longitude": 11.0131217        
@@ -239,7 +239,7 @@
     },
     {
         "name": "Dnjepropetrowsk",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Ukraine",
         "latitude": 48.464717,
         "longitude": 35.046183        
@@ -260,7 +260,7 @@
     },
     {
         "name": "Dnjepr",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Ukraine",
         "latitude": 51.1791974,
         "longitude": 32.6080941        
@@ -274,7 +274,7 @@
     },
     {
         "name": "Nowonoskowsk",
-        "alternativeName": [],
+        "alternativeName": [""],
         "country": "Ukraine",
         "latitude": 54.0109034,
         "longitude": 38.2963063        
