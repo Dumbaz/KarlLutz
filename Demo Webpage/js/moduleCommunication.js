@@ -8,22 +8,23 @@ window.onload = function() {
 
 		function(callback) {
 			parseLocations(function(parsedLocations) {
-				console.log('parsing is done ' + parsedLocations.length + parsedPhotosets.length);				
-				callback(parsedLocations);
+				console.log('callback' + parsedLocations.length);				
+				callback(null, parsedLocations);
 			})
 		},
 		function(callback) {
 			parsePhotoSets(function(parsedPhotosets) { 
-				callback(parsedPhotosets);
+				callback(null, parsedPhotosets);
 			})
 		}
 
-	], function(parsedLocations, parsedPhotosets) {
+	],function(error, results) {
 
-		locations = parsedLocations;
-		photoSets = parsedPhotosets;
+		console.log('callback 2' + results[0].length + " test " + results[1].length);				
+		locations = results[0];
+		photoSets = results[1];
 
-		initMap(parsedLocations);
+		initMap(locations);
 	});
 
 }
@@ -61,9 +62,14 @@ function parseLocations(callback) {
 
 function parsePhotoSets(callback) {
 
-	var parsedPhotosets = [];
-
-	callback(parsedPhotosets);
+  $.getJSON("./Data/192-20.json", function( data ) {
+    console.log("parsed number of photosets " + data.length);
+    callback(data);
+  })
+  .error(function(jqXHR, textStatus, errorThrown) {
+      console.log("error " + textStatus);
+      console.log("incoming Text " + jqXHR.responseText);
+  });
 }
 
 //Module communication

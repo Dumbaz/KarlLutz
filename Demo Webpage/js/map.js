@@ -31,8 +31,6 @@ function initMap(parsedLocations) {
   });
 
   standardTileLayer.addTo(map);
-
-  console.log("markes" + parsedLocations.length);
     
   addMarkerToMap();
 
