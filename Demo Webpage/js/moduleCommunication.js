@@ -24,6 +24,8 @@ window.onload = function() {
 		photoSets = results[1];
 
 		initMap(locations);
+		React.render(React.createElement(PictureViewport, {photosets: photoSets}), document.getElementById('pictureViewport'));
+
 	});
 
 }
