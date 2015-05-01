@@ -402,8 +402,8 @@ hr {
    /* PictureViewport
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.piectureViewport {
-  overflow: hidden;
+#pictureViewport {
+  overflow:hidden;
 }
 
 .photoset {

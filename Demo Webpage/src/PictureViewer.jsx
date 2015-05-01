@@ -169,18 +169,46 @@ var Slider = React.createClass({
 		};
 	},
 
+	componentDidMount: function() {
+    window.addEventListener('keydown', this.onKeydown, true);
+  },
+
+  componentWillUnmount: function() {
+    window.removeEventListener('keydown', this.onKeydown, true);
+  },
+
+	onKeydown: function(e) {
+		if (e.keyCode === 39) {  // Right
+			this.slide('right');
+		}
+		if (e.keyCode === 37) {  // Left.
+			this.slide('left');
+		}
+	},
+
+	slide: function(direction) {
+		var vector = (direction === 'right') ? 1 : -1;
+		if ( this.inBound(vector) ) {
+			this.setState({'currSetId': this.state.currSetId+vector});
+		}
+	},
+
+	inBound: function(vector) {
+		return this.state.currSetId+vector >= 0 && this.state.currSetId+vector < this.props.photosets.length;
+	},
+
 	render: function() {
 		var self = this;
 
+		console.log('current photoset Id: ', this.state.currSetId);
+
 		var sets = $.map(this.props.photosets, function(v,k) {
-			// if (k < 4) {
-				var current = (self.state.currSetId === k) ? true : false;
-				return <PhotoSet key={k} photoset={v} isCurrent={current} />;
-			// }
+			var current = (self.state.currSetId === k) ? true : false;
+			return <PhotoSet key={k} photoset={v} isCurrent={current} />;
 		});
 
 		return (
-			<div className="slider">
+			<div className="slider" onScroll={this.onScroll}>
 				<div className="sliderWrap">
 					{sets}
 				</div>
