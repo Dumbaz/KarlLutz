@@ -1,4 +1,6 @@
 # KarlLutz
+
+[![Join the chat at https://gitter.im/Dumbaz/KarlLutz](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Dumbaz/KarlLutz?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 CodingDaVinci
 
 linklist currently contains about 2000 direct links to the images hosted on flickr. There are about 2000 more missing due to a bug
