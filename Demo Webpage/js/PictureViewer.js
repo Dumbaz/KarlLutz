@@ -119,7 +119,7 @@ var Photo = React.createClass({displayName: "Photo",
 
 	render: function() {
 		var link = (this.props.show) ? this.props.link : '';
-		return React.createElement("div", {className: "photo"}, React.createElement("img", {src: link}));
+		return React.createElement("div", {className: "photo", onClick: this.props.onClick}, React.createElement("img", {src: link}));
 	}
 
 });
@@ -135,21 +135,59 @@ var PhotoSet = React.createClass({displayName: "PhotoSet",
 		MasonryMixin('photos', {})
 	],
 
+	getInitialState: function () {
+	    return {
+	        showPhotoBox: false  
+	    };
+	},
+
+	handleClick: function(e) {
+		e.preventDefault();
+		this.displayPhotoBox(e.target.src);
+	},
+
+	displayPhotoBox: function(link) {
+		var img,
+				display = this.refs.photoBox.getDOMNode();
+		img = document.createElement('img');
+		img.src = link;
+		display.appendChild(img);
+		this.setState({showPhotoBox: !this.state.showPhotoBox});
+	},
+
+	removePhotoBox: function() {
+		this.refs.photoBox.getDOMNode().childNodes[1].remove();
+		this.setState({showPhotoBox: !this.state.showPhotoBox});
+	},
+
 	render: function() {
 		var self = this,
 				cx = React.addons.classSet;
 
 		var photos = $.map(this.props.photoset.links, function(v,k) {
-			return React.createElement(Photo, {key: k, show: self.props.isCurrent, link: v});
+			return React.createElement(Photo, {key: k, show: self.props.isCurrent, link: v, onClick: self.handleClick});
 		});
 
 		var setClasses = cx({
 			'photoset': true,
 			'visible': this.props.isCurrent
 		});
+
+		var photoBoxStyles = {
+			'display': this.state.showPhotoBox ? 'block' : 'none',
+			'boxSizing': 'border-box',
+			'position': 'absolute',
+			'width': '100%',
+			'height': '100vh',
+			'padding': '2%',
+			'zIndex': 10
+		};
 		
 		return (
-			React.createElement("div", {className: setClasses}, 
+			React.createElement("div", {className: setClasses, styles: "position:relative"}, 
+				React.createElement("div", {className: "photoBox", ref: "photoBox", style: photoBoxStyles}, 
+					React.createElement("a", {className: "close", onClick: this.removePhotoBox}, "Close")
+				), 
 				React.createElement("div", {className: "photos", ref: "photos"}, 
 					photos
 				)

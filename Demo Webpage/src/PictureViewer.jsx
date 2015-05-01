@@ -119,7 +119,7 @@ var Photo = React.createClass({
 
 	render: function() {
 		var link = (this.props.show) ? this.props.link : '';
-		return <div className="photo"><img src={link} /></div>;
+		return <div className="photo" onClick={this.props.onClick} ><img src={link} /></div>;
 	}
 
 });
@@ -135,21 +135,59 @@ var PhotoSet = React.createClass({
 		MasonryMixin('photos', {})
 	],
 
+	getInitialState: function () {
+	    return {
+	        showPhotoBox: false  
+	    };
+	},
+
+	handleClick: function(e) {
+		e.preventDefault();
+		this.displayPhotoBox(e.target.src);
+	},
+
+	displayPhotoBox: function(link) {
+		var img,
+				display = this.refs.photoBox.getDOMNode();
+		img = document.createElement('img');
+		img.src = link;
+		display.appendChild(img);
+		this.setState({showPhotoBox: !this.state.showPhotoBox});
+	},
+
+	removePhotoBox: function() {
+		this.refs.photoBox.getDOMNode().childNodes[1].remove();
+		this.setState({showPhotoBox: !this.state.showPhotoBox});
+	},
+
 	render: function() {
 		var self = this,
 				cx = React.addons.classSet;
 
 		var photos = $.map(this.props.photoset.links, function(v,k) {
-			return <Photo key={k} show={self.props.isCurrent} link={v} />;
+			return <Photo key={k} show={self.props.isCurrent} link={v} onClick={self.handleClick} />;
 		});
 
 		var setClasses = cx({
 			'photoset': true,
 			'visible': this.props.isCurrent
 		});
+
+		var photoBoxStyles = {
+			'display': this.state.showPhotoBox ? 'block' : 'none',
+			'boxSizing': 'border-box',
+			'position': 'absolute',
+			'width': '100%',
+			'height': '100vh',
+			'padding': '2%',
+			'zIndex': 10
+		};
 		
 		return (
-			<div className={setClasses}>
+			<div className={setClasses} styles="position:relative">
+				<div className="photoBox" ref="photoBox" style={photoBoxStyles}>
+					<a className="close" onClick={this.removePhotoBox}>Close</a>
+				</div>
 				<div className="photos" ref="photos">
 					{photos}
 				</div>

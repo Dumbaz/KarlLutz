@@ -420,7 +420,18 @@ hr {
   height: 150px;
   overflow: hidden;
 }
+.photo:hover {
+  opacity: 0.8;
+}
 .photo img {
   max-width: 100%;
   height: auto;
+}
+
+.photoBox img {
+  max-height: 95%;
+}
+.photoBox .close {
+  display: block;
+  color: yellow;
 }
