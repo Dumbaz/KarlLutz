@@ -1,9 +1,11 @@
 'use strict';
+
+/**
+ * MasonryMixin
+ */
 var isBrowser = (typeof window !== 'undefined');
 var Masonry = isBrowser ? window.Masonry : null;
 var imagesloaded = isBrowser ? window.imagesLoaded : null;
-
-
 var MasonryMixin = function(reference, options) {
     return {
         masonry: false,
