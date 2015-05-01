@@ -23,6 +23,13 @@ window.onload = function() {
 		locations = results[0];
 		photoSets = results[1];
 
+		// Convert photosets object to an array.
+		var arr = [];
+		$.each(photoSets, function(k,v) {
+			arr.push(v);
+		});
+		photoSets = arr;	
+
 		initMap(locations);
 		React.render(React.createElement(PictureViewport, {photosets: photoSets}), document.getElementById('pictureViewport'));
 
@@ -67,7 +74,7 @@ function parsePhotoSets(callback) {
     console.log("parsed number of photosets " + data);
 
     for (var photoset in data) {
-    	console.log(photoset.links);
+    	// console.log(photoset.links);
     }
 
     callback(data);
