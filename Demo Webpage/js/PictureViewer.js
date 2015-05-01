@@ -1,3 +1,4 @@
+'use strict';
 var isBrowser = (typeof window !== 'undefined');
 var Masonry = isBrowser ? window.Masonry : null;
 var imagesloaded = isBrowser ? window.imagesLoaded : null;
