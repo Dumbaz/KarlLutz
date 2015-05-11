@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+	<title>Visualization Test</title>
+
+	<style type="text/css">
+
+		circle {
+			opacity: 0.2;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="chart">
+		chart
+	</div>
+
+	<script type="text/javascript" src="./node_modules/dc/node_modules/crossfilter/crossfilter.js"></script>
+	<script type="text/javascript" src="./node_modules/d3/d3.js"></script>
+	<script type="text/javascript" src="./node_modules/dc/dc.js"></script>
+	
+	<script type="text/javascript">
+
+		var dataset,
+			yearScale = d3.scale.linear()
+				.domain( [1910, 1946])
+				.range( [0, 800]);
+
+		d3.csv("192-20.csv", function( data ) {
+
+			dataset = data;
+
+			for (var i = 0; i < dataset.length; i++) {
+				dataset[i].unitdate = parseInt(dataset[i].unitdate) || 1940;
+
+			}
+
+			make();
+
+		});
+
+		function weight (d) {
+
+		}
+
+		function make () {
+			
+			var svg = d3.select( "body" ).append( "svg" )
+				.attr( "width", 800 )
+				.attr( "height", 600 );
+				
+			var works = svg.append( "g" )
+				.attr( "id", "works")
+				.attr( "transform", "translate( 0, 100 ) ");
+
+			worksData = d3.nest()
+				.key( function(d) {
+					return d.unitdate;
+				})
+				.entries( dataset );
+
+			works.selectAll ( "g.work" ).data( dataset )
+				.enter()
+			.append( "g" )
+				.attr( "class", "work")
+				.attr( "transform", function( d) {
+
+					var x = yearScale( d.unitdate );
+
+					return "translate( " + x + ", 0 )";
+				})
+			.append("img")
+				.attr("src", function(d){
+					return JSON.parse(d.links)[0];
+				})
+
+			.append( "circle" )
+				.attr( "r", 5);
+
+		}
+
+
+
+	</script>
+
+</body>
+</html>
