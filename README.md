@@ -11,4 +11,5 @@ Data from XML can be found as .csv and .json
 
 
 JSON is hosted on http://davinci.dumbaz.de/192-20.json
+
 Zipped pictures are hosted on http://davinci.dumbaz.de/zippedPics.zip
