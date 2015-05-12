@@ -1,14 +1,12 @@
 import urllib2
 import json
 import os
-from pprint import pprint
-
 
 # Importing the whole JSON file from folder
 with open('192-20.json') as data_file:
 	data = json.load(data_file)
 
-# Creating all the folders
+# Creating the folders
 def folderCreation(dirName):
 	if not os.path.isdir(dirName):
 		os.makedirs(dirName)
@@ -17,7 +15,7 @@ def folderCreation(dirName):
 		print dirName + " already exists"
 
 
-# Method for downloading images by URL
+# Downloading images by URL
 def imageDownloader(imgURL):
 	img = urllib2.urlopen(imgURL)
 	imgName = imgURL.rsplit('/', 1)[1]
@@ -42,7 +40,9 @@ def imageDownloader(imgURL):
 
 # Main loop
 for x in xrange(1,166):
+	# Creating a list of all links per JSON Object
 	links = data["192-20_" + str(x)]["links"]
+	# links[0] can be null, skip those
 	if links[0]:
 		folderCreation("192-20_" + str(x) )
 		os.chdir("192-20_"+str(x))
