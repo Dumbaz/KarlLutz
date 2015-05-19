@@ -1,0 +1,836 @@
+{
+    "Südstein" : {
+        "present_name":"Südstein",
+        "country":"Deutsches Reich",
+        "present_country":"Deutschland",
+        "latitude": 0,       
+        "longitude": 0
+    },
+    "Langkopf" : {
+        "present_name":"Langkopf",
+        "country":"Deutsches Reich",
+        "present_country":"Deutschland",
+        "latitude": 0, 
+        "longitude": 0        
+    },
+    "Diedolshausen" : {
+        "present_name":"Le Bonhomme",
+        "country":"Deutsches Reich",
+        "present_country":"Frankreich",
+        "latitude": 48.171884,        
+        "longitude": 7.116301        
+    },
+    "Landau" : {
+        "present_name":"Landau",
+        "country":"Deutsches Reich",
+        "present_country":"Deutschland",
+        "latitude": 49.198886,        
+        "longitude": 8.1185622        
+    },
+    "Poppi" : {
+        "present_name":"Poppi",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 43.7233771,        
+        "longitude": 11.7700248        
+    },
+    "Florenz" : {
+        "present_name":"Florenz",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 43.7695604,        
+        "longitude": 11.2558136        
+    },
+    "Borgo alla Collina" : {
+        "present_name":"Borgo alla Collina",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 43.7491791,        
+        "longitude": 11.7249783        
+    },
+    "Desenzano" : {
+        "present_name":"Desenzano",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 45.4704819,        
+        "longitude": 10.53259        
+    },
+    "Paris" : {
+        "present_name":"Paris",
+        "country":"Frankreich",
+        "present_country":"Frankreich",
+        "latitude": 48.856614,        
+        "longitude": 2.3522219        
+    },
+    "Brescia" : {
+        "present_name":"Brescia",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 45.5415526,        
+        "longitude": 10.2118019       
+    },
+    "Juchnow" : {
+        "present_name":"Juchnow",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 54.744444,        
+        "longitude": 35.229722       
+    },
+    "Kamenka" : {
+        "present_name":"Kamenka",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 54.4125995,        
+        "longitude": 33.9352009       
+    },
+    //city not found
+    "Borowick" : {
+        "present_name":"Borowick",
+        "country":"Sowjetunion",
+        "present_country":"Lettland",
+        "latitude": 56.879635,        
+        "longitude": 24.603189       
+    },
+    "Pleskau" : {
+        "present_name":"Pskow",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 57.8166994,        
+        "longitude": 28.3344734       
+    },
+    "Marienburg" : {
+        "present_name":"Alūksne",
+        "country":"Sowjetunion",
+        "present_country":"Lettland",
+        "latitude": 57.4207878,        
+        "longitude": 27.0513491       
+    },
+    "Frankreich" : {
+        "present_name":"Frankreich",
+        "country":"Frankreich",
+        "present_country":"Frankreich",
+        "latitude": 46.227638,        
+        "longitude": 2.213749       
+    },
+    //city not found
+    "Selzo" : {
+        "present_name":"Seltso",
+        "country":"Sowjetunion",
+        "present_country":"Lettland",
+        "latitude": 56.879635,        
+        "longitude": 24.603189       
+    },
+    "Lettland" : {
+        "present_name":"Lettland",
+        "country":"Lettland",
+        "present_country":"Lettland",
+        "latitude": 56.879635,        
+        "longitude": 24.603189       
+    },
+    "Roßlawl" : {
+        "present_name":"Roslawl",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 53.953118,        
+        "longitude": 32.863845       
+    },
+    "Schaulen" : {
+        "present_name":"Schaulen",
+        "country":"Sowjetunion",
+        "present_country":"Litauen",
+        "latitude": 55.9349085,        
+        "longitude": 23.3136823       
+    },
+    "Rundale" : {
+        "present_name":"Rundāle",
+        "country":"Sowjetunion",
+        "present_country":"Lettland",
+        "latitude": 56.409721,        
+        "longitude": 24.0124139       
+    },
+    "Taplacken" : {
+        "present_name":"Talpaki",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 54.65,        
+        "longitude": 21.333333
+    },
+    "Tauroggen" : {
+        "present_name":"Tauragè",
+        "country":"Sowjetunion",
+        "present_country":"Litauen",
+        "latitude": 55.250366,        
+        "longitude": 22.29095
+    },
+    "Tilsit" : {
+        "present_name":"Tilsit",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 55.083333,        
+        "longitude": 21.883333
+    },
+    "Tannenberg" : {
+        "present_name":"Olsztynek",
+        "country":"Deutsches Reich",
+        "present_country":"Polen",
+        "latitude": 53.58244,        
+        "longitude": 20.2827
+    },
+    "Warschau" : {
+        "present_name":"Warschau",
+        "country":"Deutsches Reich",
+        "present_country":"Polen",
+        "latitude": 52.2296756,        
+        "longitude": 21.0122287
+    },
+    "Riga" : {
+        "present_name":"Rīga",
+        "country":"Sowjetunion",
+        "present_country":"Lettland",
+        "latitude": 56.9496487,        
+        "longitude": 24.1051864    
+    },
+    "Wenden" : {
+        "present_name":"Cēsis",
+        "country":"Sowjetunion",
+        "present_country":"Lettland",
+        "latitude": 57.308611,        
+        "longitude": 25.2668719
+    },
+    //city not found
+    "Liegna" : {
+        "present_name":"Liegna",
+        "country":"Sowjetunion",
+        "present_country":"Lettland",
+        "latitude": 56.879635,        
+        "longitude": 24.603189
+    },
+    //city not found
+    "Reudebe" : {
+        "present_name":"Reudebe",
+        "country":"",
+        "present_country":"",
+        "latitude": 0,        
+        "longitude": 0
+    },
+    //city not found
+    "Siebda" : {
+        "present_name":"Siebda",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 0,        
+        "longitude": 0
+    },
+    "Berlin" : {
+        "present_name":"Berlin",
+        "country":"Deutsches Reich",
+        "present_country":"Deutschland",
+        "latitude": 52.5200066,        
+        "longitude": 13.404954
+    },
+    "Heydekrug" : {
+        "present_name":"Šilutė",
+        "country":"Sowjetunion",
+        "present_country":"Litauen",
+        "latitude": 55.350414,        
+        "longitude": 21.4659859
+    },
+    "Stalino" : {
+        "present_name":"Donezk",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 48.015883,        
+        "longitude": 37.80285
+    },
+    "Petrowka" : {
+        "present_name":"Petrovka",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 48.804444,        
+        "longitude": 39.262778
+    },
+    "Braunschweig" : {
+        "present_name":"Braunschweig",
+        "country":"Deutsches Reich",
+        "present_country":"Deutschland",
+        "latitude": 52.2688736,        
+        "longitude": 10.5267696
+    },
+    "Rostow" : {
+        "present_name":"Rostow",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 47.233333,
+        "longitude": 39.7 
+    },
+    "Nowotscherkask" : {
+        "present_name":"Nowotscherkask",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 47.416667,
+        "longitude": 40.083333
+    },
+    "Tschistjakowo" : {
+        "present_name":"Tschistjakowo",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 48.038333,
+        "longitude": 38.587778
+    },
+    "Schachty" : {
+        "present_name":"Schachty",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 47.7,
+        "longitude": 40.233333
+    },
+    "Kuibyschewo" : {
+        "present_name":"Kujbyschewe",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 47.3593,
+        "longitude": 36.5874
+    },
+    "Hannover" : {
+        "present_name":"Hannover",
+        "country":"Deutsches Reich",
+        "present_country":"Deutschland",
+        "latitude": 52.3758916,
+        "longitude": 9.7320104
+    },
+    "Stadendorf" : {
+        "present_name":"Stadendorf",
+        "country":"Deutsches Reich",
+        "present_country":"Deutschland",
+        "latitude": 53.626022,
+        "longitude": 9.274071
+    },
+    "Makejewka" : {
+        "present_name":"Makejewka",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 48.0459557,
+        "longitude": 37.9666901
+    },
+    "Ruttschenkowo" : {
+        "present_name":"Ruttschenkowo",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 47.988208,
+        "longitude": 37.673285
+    },
+    "Nowgorodka" : {
+        "present_name":"Nowhorodka",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 48.355556,
+        "longitude": 32.65
+    },
+    "Nikolajewka" : {
+        "present_name":"Mykolajiwka",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 48.771944,
+        "longitude": 38.336389
+    },
+    "Frankfurt am Main" : {
+        "present_name":"Frankfurt am Main",
+        "country":"Deutsches Reich",
+        "present_country":"Deutschland",
+        "latitude": 50.1109221,
+        "longitude": 8.6821267
+    },
+    "Wolfenbüttel" : {
+        "present_name":"Wolfenbüttel",
+        "country":"Deutsches Reich",
+        "present_country":"Deutschland",
+        "latitude": 52.1640413,
+        "longitude": 10.5408484
+    },
+    "Tost" : {
+        "present_name":"Toszek",
+        "country":"Deutsches Reich",
+        "present_country":"Polen",
+        "latitude": 50.4542102,
+        "longitude": 18.522454
+    },
+    "Rosental" : {
+        "present_name":"Różanka",
+        "country":"Deutsches Reich",
+        "present_country":"Polen",
+        "latitude": 50.1772724,
+        "longitude": 16.6324676
+    },
+    "Gleiwitz" : {
+        "present_name":"Gliwice",
+        "country":"Deutsches Reich",
+        "present_country":"Polen",
+        "latitude": 50.2944923,
+        "longitude": 18.6713802
+    },
+    "Chortiza" : {
+        "present_name":"Chortyzja",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 47.8388,
+        "longitude": 35.139567   
+    },
+    "Saporovkje" : {
+        "present_name":"Saporischschja",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 47.8388,
+        "longitude": 35.139567   
+    },
+    "Morosowskaja" : {
+        "present_name":"Morosowsk",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 48.3730365,
+        "longitude": 41.8637406   
+    },
+    "Jerekowski" : {
+        "present_name":"Jerekowski",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 47.4169,
+        "longitude": 42.7569   
+    },
+    "Remontnaja" : {
+        "present_name":"Remontnaja",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 47.4169,
+        "longitude": 42.7569   
+    },
+    "Kotelnikowo" : {
+        "present_name":"Kotelnikowo",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 47.633333,
+        "longitude": 43.15   
+    },
+    "Modena" : {
+        "present_name":"Modena",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 44.5513799,
+        "longitude": 10.918048  
+    },
+    "Guiglia" : {
+        "present_name":"Guiglia",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 44.4265324,
+        "longitude": 10.9579486  
+    },
+    "Vignola" : {
+        "present_name":"Vignola",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 44.4835861,
+        "longitude": 11.0131217
+    },
+    "Taganrog" : {
+        "present_name":"Taganrog",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 47.216667,
+        "longitude": 38.916667 
+    },
+    "Saporoshje" : {
+        "present_name":"Saporischschja",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 47.8388,
+        "longitude": 35.139567   
+    },
+    "Dnepropetrowsk" : {
+        "present_name":"Dnepropetrowsk",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 48.464717,
+        "longitude": 35.046183      
+    },
+    "Schachty" : {
+        "present_name":"Schachty",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 47.7,
+        "longitude": 40.233333    
+    },
+    "Zymljanskaja" : {
+        "present_name":"Zymljanskaja",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 47.646111,
+        "longitude": 42.101944    
+    },
+    "Chortitza" : {
+        "present_name":"Chortitza",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 47.8388,
+        "longitude": 35.139567 
+    },
+    "Poltawa" : {
+        "present_name":"Poltava",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 49.588267,
+        "longitude": 34.551417    
+    },
+    "Grischino" : {
+        "present_name":"Grischino",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 48.282778,
+        "longitude": 37.182778    
+    },
+    "Krasnograd" : {
+        "present_name":"Krasnohrad",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 49.366667,
+        "longitude": 35.45     
+    },
+    "Kriwoi Rog" : {
+        "present_name":"Krywyj Rih",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 47.910483,
+        "longitude": 33.391783
+    },
+    "Nowo Archangelsk" : {
+        "present_name":"Nowo-Archangelsk",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+ 		"latitude": 46.975033,
+        "longitude": 31.994583
+    },
+    "Kirowograd" : {
+        "present_name":"Kirowohrad",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 49.0942164,
+        "longitude": 33.6541853   
+    },
+    "Uman" : {
+        "present_name":"Uman",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 48.75,
+        "longitude": 30.216667        
+    },
+    "Przemysl" : {
+        "present_name":"Przemyśl",
+        "country":"Deutsches Reich",
+        "present_country":"Polen",
+        "latitude": 49.7838623,
+        "longitude": 22.7677908      
+    },
+    "Radymno" : {
+        "present_name":"Radymno",
+        "country":"Deutsches Reich",
+        "present_country":"Polen",
+        "latitude": 49.94712,
+        "longitude": 22.82395
+    },
+    "Prezeworsk" : {
+        "present_name":"Prezeworsk",
+        "country":"Deutsches Reich",
+        "present_country":"Polen",
+        "latitude": 50.067059,
+        "longitude": 22.499429
+    },
+    "Tarnow" : {
+        "present_name":"Tarnów",
+        "country":"Deutsches Reich",
+        "present_country":"Polen",
+        "latitude": 50.0121011,
+        "longitude": 20.9858407
+    },
+    "Reichshof" : {
+        "present_name":"Rzeszów",
+        "country":"Deutsches Reich",
+        "present_country":"Polen",
+        "latitude": 50.0411867,
+        "longitude": 21.9991196
+    },
+    "Grodek" : {
+        "present_name":"Horodok",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 49.78,
+        "longitude": 23.65
+    },
+    "Lemberg" : {
+        "present_name":"Lemberg",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 49.839683,
+        "longitude": 24.029717
+    },
+    "Kurowice" : {
+        "present_name":"Kurowice",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 49.773056,
+        "longitude": 24.423889
+    },
+    "Przemysl" : {
+        "present_name":"Przemysl",
+        "country":"Deutsches Reich",
+        "present_country":"Polen",
+        "latitude": 49.7838623,
+        "longitude": 22.7677908
+    },
+    "Zambana" : {
+        "present_name":"Zambana",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 46.1542679,
+        "longitude": 11.0928309
+    },
+    "Rovereto" : {
+        "present_name":"Rovereto",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 45.89096,
+        "longitude": 11.0401399
+    },
+    "Mantua" : {
+        "present_name":"Mantua",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 45.1564168,
+        "longitude": 10.7913751
+    },
+    "Venedig" : {
+        "present_name":"Venedig",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 45.4408474,
+        "longitude": 12.3155151   
+    },
+    "Sterzing" : {
+        "present_name":"Sterzing",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 46.8926725,
+        "longitude": 11.4336186
+    },
+    "Oetz" : {
+        "present_name":"Oetz",
+        "country":"Österreich",
+        "present_country":"Österreich",
+        "latitude": 47.2031962,
+        "longitude": 10.8965975  
+    },
+    "Desenzano" : {
+        "present_name":"Besenzano",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 45.4714531,
+        "longitude": 10.5333351  
+    },
+    "Brescia" : {
+        "present_name":"Brescia",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 45.5415526,
+        "longitude": 10.2118019     
+    },
+    "Silz" : {
+        "present_name":"Silz",
+        "country":"Österreich",
+        "present_country":"Österreich",
+        "latitude": 47.2659815,
+        "longitude": 10.9311046     
+    },
+    "Bozen" : {
+        "present_name":"Bozen",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 46.7340955,
+        "longitude": 11.2888015
+    },
+    "Monsummano" : {
+        "present_name":"Monsummano",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 43.86922,
+        "longitude": 10.8146443
+    },
+    "Brixen" : {
+        "present_name":"Brixen",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 46.7177048,
+        "longitude": 11.6572436
+    },
+    "Sterzing" : {
+        "present_name":"Sterzing",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 46.8926725,
+        "longitude": 11.4336186
+    },
+    "Stia" : {
+        "present_name":"Stia",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 43.8041281,
+        "longitude": 11.7086408
+    },
+    "Cologna Veneta" : {
+        "present_name":"Cologna Veneta",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 45.3089469,
+        "longitude": 11.3795921
+    },
+    "Borgo alla Colina" : {
+        "present_name":"Borgo alla Colina",
+        "country":"Italien",
+        "present_country":"Italien",
+        "latitude": 43.7491791,
+        "longitude": 11.7249783
+    },
+    "Proskurow" : {
+        "present_name":"Chmelnyzkyj",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 49.422983,
+        "longitude": 26.987133
+    },
+    "Winniza" : {
+        "present_name":"Winnyzja",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 49.233083,
+        "longitude": 28.468217
+    },
+    "Brazlaw" : {
+        "present_name":"Brazlaw",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 48.8162706,
+        "longitude": 28.9461989
+    },
+    //city not found
+    "Sennchi" : {
+        "present_name":"Sennchi",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 0,
+        "longitude": 0
+    },
+    //city not found
+    "Nowokomowsk" : {
+        "present_name":"Nowokomowsk",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 0,
+        "longitude": 0
+    },
+    //city not found
+    "Striniza" : {
+        "present_name":"Striniza",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 0,
+        "longitude": 0
+    },
+	"Tarnopol" : {
+        "present_name":"Ternopil",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 49.553517,
+        "longitude": 25.594767
+    },
+	"Zloczow" : {
+        "present_name":"Solotschiw",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 49.80941,
+        "longitude": 24.901371
+    },
+	"Brazlaw" : {
+        "present_name":"Brazlaw",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 48.8162706,
+        "longitude": 28.9461989
+    },
+	"Pawlograd" : {
+        "present_name":"Pawlohrad",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 48.516667,
+        "longitude": 35.866667
+    },
+	"Nowomoskowsk" : {
+        "present_name":"Nowomoskowsk",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 48.633333,
+        "longitude": 35.216667
+    },
+	"Wieliczka" : {
+        "present_name":"Wieliczka",
+        "country":"Deutsches Reich",
+        "present_country":"Polen",
+        "latitude": 49.9870619,
+        "longitude": 20.0647971
+    },
+	"Krakau" : {
+        "present_name":"Krakau",
+        "country":"Deutsches Reich",
+        "present_country":"Polen",
+        "latitude": 50.0646501,
+        "longitude": 19.9449799
+    },
+	"Smolensk" : {
+        "present_name":"Smolensk",
+        "country":"Sowjetunion",
+        "present_country":"Russland",
+        "latitude": 54.790311,
+        "longitude": 32.050366
+    },
+	"Kanenka" : {
+        "present_name":"Kanenka",
+        "country":"Sowjetunion",
+        "present_country":"Weißrussland",
+        "latitude": 53.7805936,
+        "longitude": 26.4654593
+    },
+	"Mitau" : {
+        "present_name":"Jelgava",
+        "country":"Sowjetunion",
+        "present_country":"Lettland",
+        "latitude": 56.6511091,
+        "longitude": 23.7213541
+    },
+	"Rundale" : {
+        "present_name":"Rundāle",
+        "country":"Sowjetunion",
+        "present_country":"Lettland",
+        "latitude": 56.409721,
+        "longitude": 24.0124139
+    },
+	"Vollmersweiler" : {
+        "present_name":"Vollmersweiler",
+        "country":"Deutsches Reich",
+        "present_country":"Deutschland",
+        "latitude": 49.0651933,
+        "longitude": 8.0750407
+    },
+	"Gimmeldingen" : {
+        "present_name":"Gimmeldingen",
+        "country":"Deutsches Reich",
+        "present_country":"Deutschland",
+        "latitude": 49.3755769,
+        "longitude": 8.1537925
+    }
+}
