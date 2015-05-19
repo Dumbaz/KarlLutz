@@ -113,12 +113,12 @@ var MasonryMixin = function(reference, options) {
 var Photo = React.createClass({displayName: "Photo",
 
 	propType: {
-		link: React.PropTypes.string.isRquired,
+		image: React.PropTypes.object.isRquired,
 		show: React.PropTypes.bool.isRquired
 	},
 
 	render: function() {
-		var link = (this.props.show) ? this.props.link : '';
+		var link = (this.props.show) ? this.props.image.sizes.Medium.source : '';
 		return React.createElement("div", {className: "photo", onClick: this.props.onClick}, React.createElement("img", {src: link}));
 	}
 
@@ -164,8 +164,8 @@ var PhotoSet = React.createClass({displayName: "PhotoSet",
 		var self = this,
 				cx = React.addons.classSet;
 
-		var photos = $.map(this.props.photoset.links, function(v,k) {
-			return React.createElement(Photo, {key: k, show: self.props.isCurrent, link: v, onClick: self.handleClick});
+		var photos = $.map(this.props.photoset.images, function(img,k) {
+			return React.createElement(Photo, {key: k, show: self.props.isCurrent, image: img, onClick: self.handleClick});
 		});
 
 		var setClasses = cx({
@@ -185,6 +185,10 @@ var PhotoSet = React.createClass({displayName: "PhotoSet",
 		
 		return (
 			React.createElement("div", {className: setClasses, styles: "position:relative"}, 
+				React.createElement("div", {class: "description"}, 
+					React.createElement("p", null, this.props.photoset.unitdate), 
+					React.createElement("p", null, this.props.photoset.unittitle)
+				), 
 				React.createElement("div", {className: "photoBox", ref: "photoBox", style: photoBoxStyles}, 
 					React.createElement("a", {className: "close", onClick: this.removePhotoBox}, "Close")
 				), 
@@ -212,6 +216,7 @@ var Slider = React.createClass({displayName: "Slider",
 
 	componentDidMount: function() {
     window.addEventListener('keydown', this.onKeydown, true);
+    subscribe('/photoset/select', this.selectPhotoset);
   },
 
   componentWillUnmount: function() {
@@ -228,24 +233,41 @@ var Slider = React.createClass({displayName: "Slider",
 	},
 
 	slide: function(direction) {
-		var vector = (direction === 'right') ? 1 : -1;
-		if ( this.inBound(vector) ) {
-			this.setState({'currSetId': this.state.currSetId+vector});
-		}
+		var vector = (direction === 'right') ? 1 : -1,
+				nextId = this.state.currSetId+vector;
+		if ( !this.inBound(nextId) ) return;
+		this.setState({'currSetId': this.state.currSetId+vector});
 	},
 
-	inBound: function(vector) {
-		return this.state.currSetId+vector >= 0 && this.state.currSetId+vector < this.props.photosets.length;
+	inBound: function(newId) {
+		console.log('there are this many photosets: ', this.props.photosets.length);
+		return newId >= 0 && newId < this.props.photosets.length;
+	},
+
+	selectPhotoset: function(setId) {
+		console.log('Slider::selectPhotoset() called with:', setId);
+		var id; 
+		if (typeof setId !== 'string') {
+			alert('Id provided not a string.');
+			return;
+		}
+		id = parseInt(setId.split('_')[1]);
+		if (!this.inBound(id)) {
+			alert('Index is out of bound.');
+			return;
+		}
+		this.setState({currSetId: id-1});
 	},
 
 	render: function() {
 		var self = this;
 
-		console.log('current photoset Id: ', this.state.currSetId);
+		console.log('current photoset Id: ', this.props.photosets);
 
 		var sets = $.map(this.props.photosets, function(v,k) {
 			var current = (self.state.currSetId === k) ? true : false;
-			return React.createElement(PhotoSet, {key: k, photoset: v, isCurrent: current});
+			if (v.images) 
+				return React.createElement(PhotoSet, {key: k, photoset: v, isCurrent: current});
 		});
 
 		return (
