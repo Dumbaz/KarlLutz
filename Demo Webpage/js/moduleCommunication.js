@@ -70,7 +70,7 @@ function parseLocations(callback) {
 
 function parsePhotoSets(callback) {
 
-  $.getJSON("./Data/192-20.json", function( data ) {
+  $.getJSON("./Data/eth-data.min.json", function( data ) {
     console.log("parsed number of photosets " + data);
 
     for (var photoset in data) {
