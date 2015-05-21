@@ -102,11 +102,7 @@ function addMarkerToMap() {
 }
 
 function markerOnClick(e){
-
   var photoSetID = e.target.photoSetID;
-  console.log(photoSetID);
-
-
-  mapDidSelectLocation(object[0]);
+  mapDidSelectLocation(photoSetID);
 }
 

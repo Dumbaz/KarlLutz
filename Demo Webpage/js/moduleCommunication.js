@@ -88,28 +88,9 @@ function parsePhotoSets(callback) {
 
 //Module communication
 
-function mapDidSelectLocation(location) {
-	console.log("map did select location: ");
-	
-	var latitude = location.latitude;
-	var longitude = location.longitude;
-
-	console.log(latitude + " " + longitude);
-
-	//Search OpenStreetMap Database for entries for tags 'historic battlefield'
-	//output is not much though
-
-	var apiCall1 = "http://overpass.osm.rambler.ru/cgi/interpreter?data=[out:json];node(around:100000,";
-	var apiCall2 = latitude+","+longitude;
-	var apiCall3 = ")['historic'='battlefield'];out body;";
-
-	var apiURL = apiCall1 + apiCall2 + apiCall3
-
-	console.log(apiURL);
-
-	$.get(apiURL,function(data){
-		console.log(data);
-	});
+function mapDidSelectLocation(photoSetID) {
+	publish('/photoset/select',[photoSetID]);
+	console.log("map did select photoset: ",photoSetID);
 }
 
 function pictureViewportDidSelectLocation(location) {
