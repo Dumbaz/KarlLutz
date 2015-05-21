@@ -71,12 +71,14 @@ function addMarkerToMap() {
             polygons.push([location.latitude,location.longitude]);  
 
             var marker = L.marker([location.latitude, location.longitude]).addTo(map);
+            marker.photoSetID = photoSetKey;
+
+            marker.on('click', function(e) {
+              markerOnClick(e);
+            });
           };
   
         }
-
-        
-        
 
       }
 
@@ -105,4 +107,3 @@ function markerOnClick(e){
   var photoSetID = e.target.photoSetID;
   mapDidSelectLocation(photoSetID);
 }
-
