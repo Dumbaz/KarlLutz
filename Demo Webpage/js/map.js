@@ -1,9 +1,13 @@
 var locations = [];
+var photoSets = [];
 var map;
 
-function initMap(parsedLocations) { 
+function initMap(parsedLocations,parsedPhotoSets) { 
 
   locations = parsedLocations;
+  photoSets = parsedPhotoSets;
+
+  console.log("number of photoSets in map.js "+ Object.keys(photoSets).length);
 
   map = L.map('map').setView([49.3208300, 8.4311100], 6);
   var marker = L.marker([49.3208300, 8.4311100]).addTo(map);
@@ -38,35 +42,70 @@ function initMap(parsedLocations) {
 
 function addMarkerToMap() {
 
-  for (var i = 0;i < locations.length; i++){
-    var location = locations[i];
-    var marker = L.marker([location.latitude, location.longitude]).addTo(map);
+  var i = 0;
 
-    marker.on('click', function(e) {
-      markerOnClick(e);
-    });
+  for (photoSetKey in photoSets){
+    var photoSet = photoSets[photoSetKey];
+
+    if (photoSet.hasOwnProperty("locations")) {
+      var photoSetLocations = photoSet.locations;
+      console.log("locations " + photoSetLocations.length);
+
+      //has to be in form of [
+      //   [51.509, -0.08],
+      //   [51.503, -0.06],
+      //   [51.51, -0.047]
+      // ]
+
+      var polygons = [];
+
+      for(photoSetLocationKey in photoSetLocations) {
+
+        var photoSetLocation = photoSetLocations[photoSetLocationKey];
+        var name = photoSetLocation.Ort;
+
+        if(locations.hasOwnProperty(name)){
+          var location = locations[name];
+
+          if (location.latitude > 0 && location.longitude > 0) {
+            polygons.push([location.latitude,location.longitude]);  
+
+            var marker = L.marker([location.latitude, location.longitude]).addTo(map);
+          };
+  
+        }
+
+        
+        
+
+      }
+
+      console.log("location polygon string " + JSON.stringify(polygons) + "key" + photoSetKey);
+      var polygon = L.polygon(polygons).addTo(map);
+      i++;
+
+      var hexString = i.toString(16);      
+      var hexColor = '#00'+hexString+'FF';
+      console.log(hexColor);
+
+      polygon.setStyle({fillColor: hexColor,color: hexColor});  
+      polygon.photoSetID = photoSetKey;
+
+      polygon.on('click', function(e) {
+          markerOnClick(e);
+      });
+
+      
+    };
+
   }
 }
 
 function markerOnClick(e){
 
-  var latitude = e.latlng.lat;
-  var longitude = e.latlng.lng;
+  var photoSetID = e.target.photoSetID;
+  console.log(photoSetID);
 
-  var object = locations.filter(function(v){
-      return (v.latitude == latitude) && (v.longitude == longitude);
-  });
-
-  var description = object[0].name;
-
-  if (object[0].alternativeName.length > 0){
-    description = description + " ,alternative Namen " + object[0].alternativeName;
-  }
-
-  var popup = L.popup(closeButton = false)
-        .setLatLng(e.latlng)
-        .setContent(description)
-        .openOn(map);
 
   mapDidSelectLocation(object[0]);
 }

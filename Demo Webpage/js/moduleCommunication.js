@@ -19,12 +19,12 @@ window.onload = function() {
 
 	],function(error, results) {
 
-		console.log('locations' + results[0].length + " photoSets " + results[1].length);				
+		console.log('locations' + Object.keys(results[0]).length + " photoSets " + Object.keys(results[1]).length);				
 		locations = results[0];
 		photoSets = results[1];
 
-		initMap(locations);
-		React.render(React.createElement(PictureViewport, {photosets: photoSets}), document.getElementById('pictureViewport'));
+		initMap(locations, photoSets);
+		// React.render(React.createElement(PictureViewport, {photosets: photoSets}), document.getElementById('pictureViewport'));
 
 	});
 
@@ -50,8 +50,8 @@ function photo (link, width, height, location) {
 
 function parseLocations(callback) {
 
-  $.getJSON("./Data/Wasserspeyer_Locations.json", function( data ) {
-    console.log("parsed number of locations " + data.length);
+  $.getJSON("./Data/locations.json", function( data ) {
+    console.log("parsed number of locations " + Object.keys(data).length);
     callback(data);
   })
   .error(function(jqXHR, textStatus, errorThrown) {
@@ -63,8 +63,8 @@ function parseLocations(callback) {
 
 function parsePhotoSets(callback) {
 
-  $.getJSON("./Data/192-20.json", function( data ) {
-    console.log("parsed number of photosets " + data);
+  $.getJSON("./Data/data.json", function( data ) {
+    console.log("parsed number of photosets " + Object.keys(data).length);
 
     for (var photoset in data) {
     	console.log(photoset.links);
