@@ -25,10 +25,16 @@ window.onload = function() {
 
 		initMap(locations, photoSets);
 
+
 		// Convert photosets object to an array.
 		var arr = [];
+		for (var i=0;i<162;i++) {
+			arr.push({});
+		}
 		$.each(photoSets, function(k,v) {
-			arr.push(v);
+			v.id = k;
+			var idx = parseInt(k.split('_')[1])-1;
+			arr.splice(idx, 1, v);
 		});
 		photoSets = arr;	
 
