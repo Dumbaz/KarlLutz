@@ -165,7 +165,9 @@ var PhotoSet = React.createClass({displayName: "PhotoSet",
 				cx = React.addons.classSet;
 
 		var photos = $.map(this.props.photoset.images, function(img,k) {
-			return React.createElement(Photo, {key: k, show: self.props.isCurrent, image: img, onClick: self.handleClick});
+			if (!img.rearSide) {
+				return React.createElement(Photo, {key: k, show: self.props.isCurrent, image: img, onClick: self.handleClick});
+			}
 		});
 
 		var setClasses = cx({
