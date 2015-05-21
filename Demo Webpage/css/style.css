@@ -398,3 +398,40 @@ hr {
   #pictureViewport {
     height:100vh;
   }
+
+   /* PictureViewport
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#pictureViewport {
+  overflow:hidden;
+}
+
+.photoset {
+  display: none;
+}
+
+.photoset.visible {
+  display: block;
+}
+
+.photo {
+  display: block;
+  width: 33.3%;
+  height: 150px;
+  overflow: hidden;
+}
+.photo:hover {
+  opacity: 0.8;
+}
+.photo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.photoBox img {
+  max-height: 95%;
+}
+.photoBox .close {
+  display: block;
+  color: yellow;
+}
