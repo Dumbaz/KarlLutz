@@ -403,7 +403,7 @@ hr {
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 #pictureViewport {
-  overflow:hidden;
+  /*overflow:hidden;*/
 }
 
 .photoset {
