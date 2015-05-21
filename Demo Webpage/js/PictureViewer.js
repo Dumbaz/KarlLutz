@@ -240,7 +240,6 @@ var Slider = React.createClass({displayName: "Slider",
 	},
 
 	inBound: function(newId) {
-		console.log('there are this many photosets: ', this.props.photosets.length);
 		return newId >= 0 && newId < this.props.photosets.length;
 	},
 
@@ -261,8 +260,6 @@ var Slider = React.createClass({displayName: "Slider",
 
 	render: function() {
 		var self = this;
-
-		console.log('current photoset Id: ', this.props.photosets);
 
 		var sets = $.map(this.props.photosets, function(v,k) {
 			var current = (self.state.currSetId === k) ? true : false;
