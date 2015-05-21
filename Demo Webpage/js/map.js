@@ -34,7 +34,7 @@ function initMap(parsedLocations,parsedPhotoSets) {
     attribution: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   });
 
-  standardTileLayer.addTo(map);
+  stamen_TonerLite.addTo(map);
     
   addMarkerToMap();
 
