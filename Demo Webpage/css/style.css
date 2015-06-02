@@ -394,11 +394,22 @@ hr {
   /* Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-  #map,
   #pictureViewport {
     height:100vh;
   }
+  #map {
+    height: 85vh;
+    margin-top: 15vh;
+  }
 
+  #slider {
+    position: relative;
+    margin: 20px;
+    height: 30px;
+    width: 45%;
+    max-width: 960px;
+  }
+  
    /* PictureViewport
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -434,4 +445,10 @@ hr {
 .photoBox .close {
   display: block;
   color: yellow;
+}
+
+.leaflet-popup-content-wrapper {
+  padding: 1px;
+  text-align: left;
+  border-radius: 0px;
 }

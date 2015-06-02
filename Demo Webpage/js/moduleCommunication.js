@@ -2,8 +2,12 @@
 var locations;
 var photoSets = [];
 
-window.onload = function() {
+window.onpageshow = function() {
+	console.log("onpageshow");
+}
 
+window.onload = function() {
+	console.log("onload");
 	async.parallel([
 
 		function(callback) {

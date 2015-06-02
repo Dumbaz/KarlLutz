@@ -1,4 +1,11 @@
 {
+    "Speyer" : {
+        "present_name":"Speyer",
+        "country":"Deutsches Reich",
+        "present_country":"Deutschland",
+        "latitude": 49.3208300,       
+        "longitude": 8.4311100
+    },
     "Südstein" : {
         "present_name":"Südstein",
         "country":"Deutsches Reich",

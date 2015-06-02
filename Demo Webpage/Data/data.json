@@ -2082,6 +2082,18 @@
         "filenameYear": "1930",
         "rearSide": false
       }
+    ],
+    "locations" :[
+      {
+        "ID": "1a",
+        "Datum_Anfang": "1/1/30",
+        "Datum_Ende": "31/12/30",
+        "Ort": "Speyer",
+        "heutiger_Ortsname": "Speyer",
+        "Land": "Deutsches Reich",
+        "Land heute": "Deutschland",
+        "setID": "1"
+      }
     ]
   },
   "192-20_14": {
@@ -2711,7 +2723,7 @@
   "192-20_19": {
     "unitdate": 1939,
     "unitdate-normal": "1939-01-01",
-    "unittitle": "Serie von Bildern von Soldaten bei einer Ãœbung.",
+    "unittitle": "Serie von Bildern von Soldaten bei einer Übung.",
     "abstract": null,
     "otherfindaid": "http://www.stadtarchiv-speyer.findbuch.net/php/main.php?ar_id=3723&be_kurz=3139322D3230&ve_vnum=19",
     "numLinks": 25,
@@ -47695,7 +47707,7 @@
   "192-20_100": {
     "unitdate": "Mai 1942",
     "unitdate-normal": "1942-05-01/1942-05-31",
-    "unittitle": "Braunschweig, Landesmuseum im Ã„gidienkloster. Diorama der\n Schlacht bei Quatre-Bras.",
+    "unittitle": "Braunschweig, Landesmuseum im Ägidienkloster. Diorama der\n Schlacht bei Quatre-Bras.",
     "abstract": null,
     "otherfindaid": "http://www.stadtarchiv-speyer.findbuch.net/php/main.php?ar_id=3723&be_kurz=3139322D3230&ve_vnum=100",
     "numLinks": 18,
@@ -69988,6 +70000,15 @@
         "setID": "111"
       },
       {
+        "ID": "111g",
+        "Datum_Anfang": "3/1/43",
+        "Datum_Ende": "4/30/43",
+        "Ort": "Poltawa",
+        "heutiger_Ortsname": "Poltawa",
+        "Land": "Sowjetunion",
+        "Land heute": "Ukraine",
+        "setID": "111"
+      },{
         "ID": "111d",
         "Datum_Anfang": "1/8/43",
         "Datum_Ende": "1/8/43",
@@ -70015,16 +70036,6 @@
         "heutiger_Ortsname": "Remontnaja",
         "Land": "Sowjetunion",
         "Land heute": "Russland",
-        "setID": "111"
-      },
-      {
-        "ID": "111g",
-        "Datum_Anfang": "3/1/43",
-        "Datum_Ende": "4/30/43",
-        "Ort": "Poltawa",
-        "heutiger_Ortsname": "Poltawa",
-        "Land": "Sowjetunion",
-        "Land heute": "Ukraine",
         "setID": "111"
       }
     ]
@@ -75456,6 +75467,16 @@
         "setID": "114"
       },
       {
+        "ID": "114e",
+        "Datum_Anfang": "4/21/43",
+        "Datum_Ende": "4/22/43",
+        "Ort": "Uman",
+        "heutiger_Ortsname": "Uman",
+        "Land": "Sowjetunion",
+        "Land heute": "Ukraine",
+        "setID": "114"
+      },
+      {
         "ID": "114c",
         "Datum_Anfang": "4/22/43",
         "Datum_Ende": "4/22/43",
@@ -75471,16 +75492,6 @@
         "Datum_Ende": "4/22/43",
         "Ort": "Kirowograd",
         "heutiger_Ortsname": "Kirowohrad",
-        "Land": "Sowjetunion",
-        "Land heute": "Ukraine",
-        "setID": "114"
-      },
-      {
-        "ID": "114e",
-        "Datum_Anfang": "4/21/43",
-        "Datum_Ende": "4/22/43",
-        "Ort": "Uman",
-        "heutiger_Ortsname": "Uman",
         "Land": "Sowjetunion",
         "Land heute": "Ukraine",
         "setID": "114"
@@ -80552,21 +80563,21 @@
         "setID": "140"
       },
       {
-        "ID": "140b",
-        "Datum_Anfang": "4/1/43",
-        "Datum_Ende": "4/30/43",
-        "Ort": "Pawlograd",
-        "heutiger_Ortsname": "Pawlohrad",
-        "Land": "Sowjetunion",
-        "Land heute": "Ukraine",
-        "setID": "140"
-      },
-      {
         "ID": "140c",
         "Datum_Anfang": "4/1/43",
         "Datum_Ende": "4/30/43",
         "Ort": "Nowomoskowsk",
         "heutiger_Ortsname": "Nowomoskowsk",
+        "Land": "Sowjetunion",
+        "Land heute": "Ukraine",
+        "setID": "140"
+      },
+      {
+        "ID": "140b",
+        "Datum_Anfang": "4/1/43",
+        "Datum_Ende": "4/30/43",
+        "Ort": "Pawlograd",
+        "heutiger_Ortsname": "Pawlohrad",
         "Land": "Sowjetunion",
         "Land heute": "Ukraine",
         "setID": "140"
@@ -82319,7 +82330,7 @@
   "192-20_123": {
     "unitdate": "August 1943",
     "unitdate-normal": "1943-08-01/1943-08-31",
-    "unittitle": "Ã–sterreich, Tirol: Oetz. Italien, Südtirol: Sterzing.\n Gebirgsjäger.",
+    "unittitle": "Österreich, Tirol: Oetz. Italien, Südtirol: Sterzing.\n Gebirgsjäger.",
     "abstract": null,
     "otherfindaid": "http://www.stadtarchiv-speyer.findbuch.net/php/main.php?ar_id=3723&be_kurz=3139322D3230&ve_vnum=123",
     "numLinks": 12,
@@ -83263,7 +83274,7 @@
   "192-20_125": {
     "unitdate": "August 1943",
     "unitdate-normal": "1943-08-01/1943-08-31",
-    "unittitle": "Ã–sterreich: Tirol. Ã–tz, Silz. Italien: Südtirol. Bozen.\n Panzer.",
+    "unittitle": "Österreich: Tirol. Ötz, Silz. Italien: Südtirol. Bozen.\n Panzer.",
     "abstract": null,
     "otherfindaid": "http://www.stadtarchiv-speyer.findbuch.net/php/main.php?ar_id=3723&be_kurz=3139322D3230&ve_vnum=125",
     "numLinks": 18,
