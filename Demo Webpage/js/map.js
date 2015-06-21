@@ -3,6 +3,7 @@ var photoSets = [];
 var map;
 
 var circleGroups = {};
+var circleLocations = {};
 
 var clickedPolygon;
 var clickedPolygonMarker;
@@ -16,12 +17,12 @@ function initMap(parsedLocations,parsedPhotoSets) {
       northEast = L.latLng(61.60639637, 52),
       bounds = L.latLngBounds(southWest, northEast);
 
-  map = L.map('map',{maxBounds: bounds,minZoom: 3.5}).setView([49.3208300, 8.4311100], 6);
+  map = L.map('map',{maxBounds: bounds,minZoom: 3}).setView([49.3208300, 8.4311100], 6);
 
   var stamen_TonerLite = L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.{ext}', {
     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     subdomains: 'abcd',
-    minZoom: 0,
+    minZoom: 3,
     maxZoom: 20,
     ext: 'png'
   });
@@ -87,11 +88,12 @@ function addMarkerToMap() {
           circles.push(circle);
 
           circle.on('click', function(e) {
+            console.log("mousclick photosetID: "+e.target.photoSetID);
             markerOnClick(e);
           });
 
           circle.on('mouseover', function(e) {
-              console.log("mouseover");
+              console.log("mouseover photosetID: "+e.target.photoSetID);
               e.target.openPopup();   
 
               for (index in circleGroups[e.target.photoSetID]){
@@ -103,7 +105,6 @@ function addMarkerToMap() {
 
           circle.on('mouseout', function(e) {
               console.log("mouseout");
-              console.log(e.target);
               e.target.closePopup();
 
               for (index in circleGroups[e.target.photoSetID]){
@@ -161,6 +162,8 @@ function markerOnClick(e){
 
 function addSlider(){
   $('#App').append("<div id='slider'></div>");
+  $('#App').append("<div id='slider2'></div>");
+
   $("#slider").rangeSlider({
                             bounds:{min: 1916, max: 1945},
                             defaultValues:{min: 1916, max: 1945},

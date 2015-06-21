@@ -39153,16 +39153,6 @@
         "setID": "82"
       },
       {
-        "ID": "82c",
-        "Datum_Anfang": "11/22/42",
-        "Datum_Ende": "12/4/42",
-        "Ort": "Rostow",
-        "heutiger_Ortsname": "Rostow",
-        "Land": "Sowjetunion",
-        "Land heute": "Russland",
-        "setID": "82"
-      },
-      {
         "ID": "82d",
         "Datum_Anfang": "12/7/42",
         "Datum_Ende": "12/7/42",
@@ -51422,6 +51412,16 @@
         "Land": "Sowjetunion",
         "Land heute": "Ukraine",
         "setID": "92"
+      },
+      {
+        "ID": "92b",
+        "Datum_Anfang": "8/21/42",
+        "Datum_Ende": "8/21/42",
+        "Ort": "Ruttschenkowo",
+        "heutiger_Ortsname": "Ruttschenkowo",
+        "Land": "Sowjetunion",
+        "Land heute": "Ukraine",
+        "setID": "92"
       }
     ]
   },
@@ -57617,8 +57617,8 @@
         "ID": "136b",
         "Datum_Anfang": "8/1/42",
         "Datum_Ende": "8/31/42",
-        "Ort": "Striniza",
-        "heutiger_Ortsname": "Striniza",
+        "Ort": "Wolocyska",
+        "heutiger_Ortsname": "Volochisk",
         "Land": "Sowjetunion",
         "Land heute": "Ukraine",
         "setID": "136"
@@ -61423,20 +61423,20 @@
     "locations": [
       {
         "ID": "93a",
-        "Datum_Anfang": "8/21/42",
-        "Datum_Ende": "8/21/42",
-        "Ort": "Ruttschenkowo",
-        "heutiger_Ortsname": "Ruttschenkowo",
+        "Datum_Anfang": "1/8/42",
+        "Datum_Ende": "31/8/42",
+        "Ort": "Kirowograd",
+        "heutiger_Ortsname": "Kirowohrad",
         "Land": "Sowjetunion",
         "Land heute": "Ukraine",
         "setID": "93"
       },
       {
-        "ID": "93b",
-        "Datum_Anfang": "8/21/42",
-        "Datum_Ende": "8/21/42",
-        "Ort": "Stalino",
-        "heutiger_Ortsname": "Stalino",
+        "ID": "93a",
+        "Datum_Anfang": "1/8/42",
+        "Datum_Ende": "31/8/42",
+        "Ort": "Kriwoi Rog",
+        "heutiger_Ortsname": "Krywyj Rih",
         "Land": "Sowjetunion",
         "Land heute": "Ukraine",
         "setID": "93"
@@ -64744,11 +64744,11 @@
     ],
     "locations": [
       {
-        "ID": "94a",
-        "Datum_Anfang": "8/17/42",
-        "Datum_Ende": "8/17/42",
-        "Ort": "Nowgorodka",
-        "heutiger_Ortsname": "Nowhorodka",
+        "ID": "140b",
+        "Datum_Anfang": "4/1/43",
+        "Datum_Ende": "4/30/43",
+        "Ort": "Pawlograd",
+        "heutiger_Ortsname": "Pawlohrad",
         "Land": "Sowjetunion",
         "Land heute": "Ukraine",
         "setID": "94"
@@ -66492,21 +66492,31 @@
     ],
     "locations": [
       {
-        "ID": "91a",
-        "Datum_Anfang": "8/23/42",
-        "Datum_Ende": "8/25/42",
-        "Ort": "Tschistjakowo",
-        "heutiger_Ortsname": "Tschistjakowo",
+        "ID": "91e",
+        "Datum_Anfang": "8/29/42",
+        "Datum_Ende": "8/29/42",
+        "Ort": "Uman",
+        "heutiger_Ortsname": "Uman",
         "Land": "Sowjetunion",
         "Land heute": "Ukraine",
         "setID": "91"
       },
       {
-        "ID": "91b",
-        "Datum_Anfang": "8/25/42",
+        "ID": "91d",
+        "Datum_Anfang": "8/29/42",
+        "Datum_Ende": "8/29/42",
+        "Ort": "Petrowka",
+        "heutiger_Ortsname": "Petrowka",
+        "Land": "Sowjetunion",
+        "Land heute": "Ukraine",
+        "setID": "91"
+      },
+      {
+        "ID": "91a",
+        "Datum_Anfang": "8/23/42",
         "Datum_Ende": "8/25/42",
-        "Ort": "Stalino",
-        "heutiger_Ortsname": "Stalino",
+        "Ort": "Tschistjakowo",
+        "heutiger_Ortsname": "Tschistjakowo",
         "Land": "Sowjetunion",
         "Land heute": "Ukraine",
         "setID": "91"
@@ -66522,11 +66532,11 @@
         "setID": "91"
       },
       {
-        "ID": "91d",
-        "Datum_Anfang": "8/29/42",
-        "Datum_Ende": "8/29/42",
-        "Ort": "Petrowka",
-        "heutiger_Ortsname": "Petrowka",
+        "ID": "91b",
+        "Datum_Anfang": "8/25/42",
+        "Datum_Ende": "8/25/42",
+        "Ort": "Stalino",
+        "heutiger_Ortsname": "Stalino",
         "Land": "Sowjetunion",
         "Land heute": "Ukraine",
         "setID": "91"
@@ -71385,31 +71395,11 @@
     ],
     "locations": [
       {
-        "ID": "112a",
-        "Datum_Anfang": "4/20/43",
-        "Datum_Ende": "4/20/43",
-        "Ort": "Saporoshje",
-        "heutiger_Ortsname": "Saporischschja",
-        "Land": "Sowjetunion",
-        "Land heute": "Ukraine",
-        "setID": "112"
-      },
-      {
-        "ID": "112b",
-        "Datum_Anfang": "4/20/43",
-        "Datum_Ende": "4/20/43",
-        "Ort": "Dnepropetrowsk",
-        "heutiger_Ortsname": "Dnepropetrovsk",
-        "Land": "Sowjetunion",
-        "Land heute": "Ukraine",
-        "setID": "112"
-      },
-      {
-        "ID": "112c",
-        "Datum_Anfang": "4/20/43",
-        "Datum_Ende": "4/20/43",
-        "Ort": "Chortitza",
-        "heutiger_Ortsname": "Chortyzja",
+        "ID": "112g",
+        "Datum_Anfang": "3/1/43",
+        "Datum_Ende": "4/30/43",
+        "Ort": "Poltawa",
+        "heutiger_Ortsname": "Poltawa",
         "Land": "Sowjetunion",
         "Land heute": "Ukraine",
         "setID": "112"
@@ -72187,21 +72177,31 @@
     ],
     "locations": [
       {
-        "ID": "113a",
-        "Datum_Anfang": "4/15/43",
-        "Datum_Ende": "4/15/43",
-        "Ort": " Grischino",
-        "heutiger_Ortsname": "Krasnoarmijsk",
+        "ID": "112a",
+        "Datum_Anfang": "4/20/43",
+        "Datum_Ende": "4/20/43",
+        "Ort": "Saporoshje",
+        "heutiger_Ortsname": "Saporischschja",
         "Land": "Sowjetunion",
         "Land heute": "Ukraine",
         "setID": "113"
       },
       {
-        "ID": "113b",
-        "Datum_Anfang": "4/15/43",
-        "Datum_Ende": "4/15/43",
-        "Ort": "Krasnograd",
-        "heutiger_Ortsname": "Krasnohrad ",
+        "ID": "112b",
+        "Datum_Anfang": "4/20/43",
+        "Datum_Ende": "4/20/43",
+        "Ort": "Dnepropetrowsk",
+        "heutiger_Ortsname": "Dnepropetrovsk",
+        "Land": "Sowjetunion",
+        "Land heute": "Ukraine",
+        "setID": "113"
+      },
+      {
+        "ID": "112c",
+        "Datum_Anfang": "4/20/43",
+        "Datum_Ende": "4/20/43",
+        "Ort": "Chortitza",
+        "heutiger_Ortsname": "Chortyzja",
         "Land": "Sowjetunion",
         "Land heute": "Ukraine",
         "setID": "113"
@@ -72947,53 +72947,44 @@
     ],
     "locations": [
       {
-        "ID": "115a",
-        "Datum_Anfang": "4/27/43",
-        "Datum_Ende": "4/27/43",
-        "Ort": "Przemysl",
-        "heutiger_Ortsname": "Przemyśl",
-        "Land": "Polen",
-        "Land heute": "Polen",
+        "ID": "114a",
+        "Datum_Anfang": "4/22/43",
+        "Datum_Ende": "4/22/43",
+        "Ort": "Dnepropetrowsk",
+        "heutiger_Ortsname": "Dnepropetrovsk",
+        "Land": "Sowjetunion",
+        "Land heute": "Ukraine",
         "setID": "115"
       },
       {
-        "ID": "115b",
-        "Datum_Anfang": "4/27/43",
-        "Datum_Ende": "4/27/43",
-        "Ort": "Radymno",
-        "heutiger_Ortsname": "Radymno",
-        "Land": "Polen",
-        "Land heute": "Polen",
+        "ID": "114b",
+        "Datum_Anfang": "4/22/43",
+        "Datum_Ende": "4/22/43",
+        "Ort": "Kriwoi Rog",
+        "heutiger_Ortsname": "Krywyj Rih",
+        "Land": "Sowjetunion",
+        "Land heute": "Ukraine",
+        "setID": "115"
+      },
+
+      {
+        "ID": "114c",
+        "Datum_Anfang": "4/22/43",
+        "Datum_Ende": "4/22/43",
+        "Ort": "Nowo-Archangelsk",
+        "heutiger_Ortsname": "Nowo Archangelsk",
+        "Land": "Sowjetunion",
+        "Land heute": "Ukraine",
         "setID": "115"
       },
       {
-        "ID": "115c",
-        "Datum_Anfang": "4/27/43",
-        "Datum_Ende": "4/27/43",
-        "Ort": "Prezeworsk",
-        "heutiger_Ortsname": "Prezeworsk",
-        "Land": "Polen",
-        "Land heute": "Polen",
-        "setID": "115"
-      },
-      {
-        "ID": "115d",
-        "Datum_Anfang": "4/27/43",
-        "Datum_Ende": "4/27/43",
-        "Ort": "Tarnow",
-        "heutiger_Ortsname": "Tarnów",
-        "Land": "Polen",
-        "Land heute": "Polen",
-        "setID": "115"
-      },
-      {
-        "ID": "115e",
-        "Datum_Anfang": "4/27/43",
-        "Datum_Ende": "4/27/43",
-        "Ort": "Reichshof",
-        "heutiger_Ortsname": "Rzeszów",
-        "Land": "Polen",
-        "Land heute": "Polen",
+        "ID": "114d",
+        "Datum_Anfang": "4/22/43",
+        "Datum_Ende": "4/22/43",
+        "Ort": "Kirowograd",
+        "heutiger_Ortsname": "Kirowohrad",
+        "Land": "Sowjetunion",
+        "Land heute": "Ukraine",
         "setID": "115"
       }
     ]
@@ -73732,25 +73723,55 @@
       }
     ],
     "locations": [
-      {
-        "ID": "116a",
-        "Datum_Anfang": "4/25/43",
-        "Datum_Ende": "4/25/43",
-        "Ort": "Grodek",
-        "heutiger_Ortsname": "Horodok",
-        "Land": "Sowjetunion",
-        "Land heute": "Ukraine",
-        "setID": "116"
+    {
+        "ID": "115a",
+        "Datum_Anfang": "4/27/43",
+        "Datum_Ende": "4/27/43",
+        "Ort": "Przemysl",
+        "heutiger_Ortsname": "Przemyśl",
+        "Land": "Polen",
+        "Land heute": "Polen",
+        "setID": "115"
       },
       {
-        "ID": "116b",
-        "Datum_Anfang": "4/25/43",
-        "Datum_Ende": "4/25/43",
-        "Ort": "Lemberg",
-        "heutiger_Ortsname": "Lemberg",
-        "Land": "Sowjetunion",
-        "Land heute": "Ukraine",
-        "setID": "116"
+        "ID": "115b",
+        "Datum_Anfang": "4/27/43",
+        "Datum_Ende": "4/27/43",
+        "Ort": "Radymno",
+        "heutiger_Ortsname": "Radymno",
+        "Land": "Polen",
+        "Land heute": "Polen",
+        "setID": "115"
+      },
+      {
+        "ID": "115c",
+        "Datum_Anfang": "4/27/43",
+        "Datum_Ende": "4/27/43",
+        "Ort": "Prezeworsk",
+        "heutiger_Ortsname": "Prezeworsk",
+        "Land": "Polen",
+        "Land heute": "Polen",
+        "setID": "115"
+      },
+      {
+        "ID": "115d",
+        "Datum_Anfang": "4/27/43",
+        "Datum_Ende": "4/27/43",
+        "Ort": "Tarnow",
+        "heutiger_Ortsname": "Tarnów",
+        "Land": "Polen",
+        "Land heute": "Polen",
+        "setID": "115"
+      },
+      {
+        "ID": "115e",
+        "Datum_Anfang": "4/27/43",
+        "Datum_Ende": "4/27/43",
+        "Ort": "Reichshof",
+        "heutiger_Ortsname": "Rzeszów",
+        "Land": "Polen",
+        "Land heute": "Polen",
+        "setID": "115"
       }
     ]
   },
@@ -74893,6 +74914,16 @@
         "Land": "Sowjetunion",
         "Land heute": "Ukraine",
         "setID": "118"
+      },
+      {
+        "ID": "118a",
+        "Datum_Anfang": "4/22/43",
+        "Datum_Ende": "4/22/43",
+        "Ort": "Gaihsin",
+        "heutiger_Ortsname": "Hajssyn",
+        "Land": "Sowjetunion",
+        "Land heute": "Ukraine",
+        "setID": "118"
       }
     ]
   },
@@ -75446,52 +75477,32 @@
       }
     ],
     "locations": [
-      {
+    {
         "ID": "114a",
-        "Datum_Anfang": "4/22/43",
-        "Datum_Ende": "4/22/43",
-        "Ort": "Dnepropetrowsk",
-        "heutiger_Ortsname": "Dnepropetrovsk",
+        "Datum_Anfang": "4/15/43",
+        "Datum_Ende": "4/15/43",
+        "Ort": "Grischino",
+        "heutiger_Ortsname": "Grischino",
         "Land": "Sowjetunion",
         "Land heute": "Ukraine",
         "setID": "114"
       },
       {
         "ID": "114b",
-        "Datum_Anfang": "4/22/43",
-        "Datum_Ende": "4/22/43",
-        "Ort": "Kriwoi Rog",
-        "heutiger_Ortsname": "Krywyj Rih",
+        "Datum_Anfang": "4/15/43",
+        "Datum_Ende": "4/15/43",
+        "Ort": "Krasnograd",
+        "heutiger_Ortsname": "Krasnohrad ",
         "Land": "Sowjetunion",
         "Land heute": "Ukraine",
         "setID": "114"
       },
       {
-        "ID": "114e",
-        "Datum_Anfang": "4/21/43",
-        "Datum_Ende": "4/22/43",
-        "Ort": "Uman",
-        "heutiger_Ortsname": "Uman",
-        "Land": "Sowjetunion",
-        "Land heute": "Ukraine",
-        "setID": "114"
-      },
-      {
-        "ID": "114c",
-        "Datum_Anfang": "4/22/43",
-        "Datum_Ende": "4/22/43",
-        "Ort": "Nowo-Archangelsk",
-        "heutiger_Ortsname": "Nowo Archangelsk",
-        "Land": "Sowjetunion",
-        "Land heute": "Ukraine",
-        "setID": "114"
-      },
-      {
-        "ID": "114d",
-        "Datum_Anfang": "4/22/43",
-        "Datum_Ende": "4/22/43",
-        "Ort": "Kirowograd",
-        "heutiger_Ortsname": "Kirowohrad",
+        "ID": "114b",
+        "Datum_Anfang": "4/15/43",
+        "Datum_Ende": "4/15/43",
+        "Ort": "Pawlograd",
+        "heutiger_Ortsname": "Pawlohrad",
         "Land": "Sowjetunion",
         "Land heute": "Ukraine",
         "setID": "114"

@@ -394,6 +394,54 @@ hr {
   /* Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+  #startPage {
+    height: 100vh;
+    background-color: rgb(182,182,182);
+  }
+
+  #title {
+    text-align: center;
+    font-size: 300%;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 300%;
+  }
+
+  .bottomArrow {
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    border: 0.5em solid #333;
+    border-radius: 50%;
+    margin-left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+  }
+
+  .bottomArrow:after {
+    content: '';
+    display: inline-block;
+    margin-top: 0.6em;
+    width: 1.4em;
+    height: 1.4em;
+    border-top: 0.5em solid #333;
+    border-right: 0.5em solid #333;
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+
+  a:hover .bottomArrow {
+    border: 0.5em solid #E5E5E5;
+  }
+
+  a:hover .bottomArrow:after {
+    border-top: 0.5em solid #E5E5E5;
+    border-right: 0.5em solid #E5E5E5;
+  }
+
   #pictureViewport {
     height:100vh;
   }
@@ -409,7 +457,14 @@ hr {
     width: 45%;
     max-width: 960px;
   }
-  
+
+  #slider2 {
+    position: absolute;
+    height: 40px;
+    width: 45%;
+    max-width: 960px;
+  }
+
    /* PictureViewport
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 

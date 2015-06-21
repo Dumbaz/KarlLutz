@@ -503,7 +503,7 @@
         "latitude": 47.910483,
         "longitude": 33.391783
     },
-    "Nowo Archangelsk" : {
+    "Nowo-Archangelsk" : {
         "present_name":"Nowo-Archangelsk",
         "country":"Sowjetunion",
         "present_country":"Ukraine",
@@ -523,6 +523,13 @@
         "present_country":"Ukraine",
         "latitude": 48.75,
         "longitude": 30.216667        
+    },
+    "Gaihsin" : {
+        "present_name":"Hajssyn",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 48.810278,
+        "longitude": 29.384167        
     },
     "Przemysl" : {
         "present_name":"Przemyśl",
@@ -740,6 +747,13 @@
         "present_country":"Ukraine",
         "latitude": 0,
         "longitude": 0
+    },
+    "Wolocyska" : {
+        "present_name":"Volochisk",
+        "country":"Sowjetunion",
+        "present_country":"Ukraine",
+        "latitude": 49.533333,
+        "longitude": 26.166667
     },
 	"Tarnopol" : {
         "present_name":"Ternopil",
