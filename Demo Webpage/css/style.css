@@ -628,6 +628,12 @@ hr {
   cursor:url(blank.png), url(blank.cur), none; 
   z-index: 30;
 }
+.closeImage {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  float: right;
+}
 
 .node circle {
   cursor: pointer;
