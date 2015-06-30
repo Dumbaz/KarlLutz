@@ -178,7 +178,6 @@ var PhotoSet = React.createClass({
 	},
 
 	componentDidMount: function () {
-		console.log('PhotoSet::componentDidMount() is current: ', this.props.isCurrent);
 		if (this.props.isCurrent) {
 			this.preload();
 		}
