@@ -150,7 +150,8 @@ var Photo = React.createClass({
 
 		return (
 			<div className={classes} onClick={this.handleClick}>
-				<img 
+				<img
+					className="photo-thumb"
 					src={link}
 					width={image.width} 
 					height={image.height} />
@@ -241,13 +242,20 @@ var PhotoSet = React.createClass({
 		
 		img.classList.add('loupe');
 		display.appendChild(img);
-		$('.photoBox img').loupe({});
-		this.setState({showPhotoBox: !this.state.showPhotoBox});
+		$('.photoBox .photo-thumb').loupe({});
+		this.setState({showPhotoBox: photo});
 	},
 
 	removePhotoBox: function() {
 		this.refs.photoBox.getDOMNode().childNodes[1].remove();
 		this.setState({showPhotoBox: !this.state.showPhotoBox});
+	},
+
+	saveImage: function() {
+		console.log('PhotoSet::saveImage() saving: ', this.state.showPhotoBox);
+		if (!this.state.showPhotoBox) return;
+		savePhotoObject(this.state.showPhotoBox);
+		console.log(window['localStorage'].getItem('savedPhotoObjects'));
 	},
 
 	render: function() {
@@ -277,6 +285,7 @@ var PhotoSet = React.createClass({
 			<div className={setClasses} styles="position:relative">
 				<div className="photoBox" ref="photoBox" style={photoBoxStyles}>
 					<a className="close" onClick={this.removePhotoBox}>Close</a>
+					<a className="save" onClick={this.saveImage}><img className="saveImage" src="/Data/save.svg" /></a>
 				</div>
 				<div className="photos" ref="photos">
 					{!this.state.showPhotoBox ? photos : null}
