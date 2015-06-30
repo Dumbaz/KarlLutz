@@ -31,7 +31,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  /*max-width: 960px;*/
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
@@ -44,17 +44,17 @@
 /* For devices larger than 400px */
 @media (min-width: 400px) {
   .container {
-    width: 85%;
+    width: 98%;
     padding: 0; }
 }
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
   .container {
-    width: 80%; }
+    width: 98%; }
   .column,
   .columns {
-    margin-left: 4%; }
+    margin-left: 2%; }
   .column:first-child,
   .columns:first-child {
     margin-left: 0; }
@@ -379,6 +379,16 @@ hr {
   border-width: 0;
   border-top: 1px solid #E1E1E1; }
 
+.down-arrow {
+  position: absolute;
+  display: block;
+  width: 50px;
+  margin-left: 50%;
+  margin-right: 50%;
+  transform: translate(-50%, -50%);
+  bottom: -10px;
+}
+
 
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -394,6 +404,11 @@ hr {
   /* Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+  section {
+    position: relative;
+    overflow: hidden;
+  }
+
   #startPage {
     height: 100vh;
     background-color: rgb(182,182,182);
@@ -406,56 +421,18 @@ hr {
     line-height: 300%;
   }
 
-  .bottomArrow {
-    text-align: center;
-    display: inline-block;
-    width: 4em;
-    height: 4em;
-    border: 0.5em solid #333;
-    border-radius: 50%;
-    margin-left: 50%;
-    margin-right: 50%;
-    transform: translate(-50%, -50%);
-    bottom: 0;
-  }
-
-  .bottomArrow:after {
-    content: '';
-    display: inline-block;
-    margin-top: 0.6em;
-    width: 1.4em;
-    height: 1.4em;
-    border-top: 0.5em solid #333;
-    border-right: 0.5em solid #333;
-    -moz-transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-  }
-
-  a:hover .bottomArrow {
-    border: 0.5em solid #E5E5E5;
-  }
-
-  a:hover .bottomArrow:after {
-    border-top: 0.5em solid #E5E5E5;
-    border-right: 0.5em solid #E5E5E5;
-  }
-
   #pictureViewport {
     height:100vh;
   }
 
   #map {
     height: 85vh;
-    width: 45%;
-    margin-top: 15vh;
   }
 
   #slider {
     position: relative;
     margin: 20px;
     height: 30px;
-    width: 45%;
     max-width: 960px;
   }
 
@@ -584,7 +561,7 @@ hr {
 /* photo browser
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-#photoBrowser {
+#photoNetwork {
   background-color: rgb(200,200,200);
   height: 100vh;
   margin-top: 0vh;

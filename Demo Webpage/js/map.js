@@ -180,8 +180,7 @@ function markerOnClick(e){
 }
 
 function addSlider(){
-  $('#container').append("<div id='slider'></div>");
-
+  
   $("#slider").rangeSlider({
                             bounds:{min: 1916, max: 1945},
                             defaultValues:{min: 1916, max: 1945},
