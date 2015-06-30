@@ -499,6 +499,32 @@ hr {
     border-radius:10px;
   }
 
+/* Start Page
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.intro-content {
+  /*display: flex ;*/
+  width: 80%;
+  margin: 0 auto;
+}
+
+.intro-context img,
+.intro-text {
+  display: inline-block;
+}
+
+.intro-content img {
+  width: 40%;
+  margin-right: 50px;
+}
+
+.intro-text {
+  width: 55%;
+  font-size: 20px;
+  vertical-align: top;
+}
+
+
    /* PictureViewport
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
