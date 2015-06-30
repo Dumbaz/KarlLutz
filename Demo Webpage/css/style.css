@@ -483,7 +483,6 @@ hr {
 .photo {
   display: block;
   width: 33.3%;
-  height: 150px;
   overflow: hidden;
 }
 .photo:hover {
@@ -492,6 +491,12 @@ hr {
 .photo img {
   max-width: 100%;
   height: auto;
+}
+.photo img.loading {
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  width: 40px;
 }
 
 .photoBox img {
