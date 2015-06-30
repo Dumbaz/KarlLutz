@@ -1,6 +1,7 @@
 
 var locations;
 var photoSets = [];
+var locationInfo = [];
 
 window.onpageshow = function() {
 	console.log("onpageshow");
@@ -19,6 +20,11 @@ window.onload = function() {
 			parsePhotoSets(function(parsedPhotosets) { 
 				callback(null, parsedPhotosets);
 			})
+		},
+		function(callback) {
+			parseLocationInfo(function(parsedlocationInfo) { 
+				callback(null, parsedlocationInfo);
+			})
 		}
 
 	],function(error, results) {
@@ -26,9 +32,9 @@ window.onload = function() {
 		console.log('locations' + Object.keys(results[0]).length + " photoSets " + Object.keys(results[1]).length);				
 		locations = results[0];
 		photoSets = results[1];
+		locationInfos = results[2];
 
-		initMap(locations, photoSets);
-
+		initMap(locations, photoSets, locationInfos);
 
 		// Convert photosets object to an array.
 		var arr = [];
@@ -42,7 +48,7 @@ window.onload = function() {
 		});
 		photoSets = arr;	
 
-		React.render(React.createElement(PictureViewport, {photosets: photoSets}), document.getElementById('pictureViewport'));
+		// React.render(React.createElement(PictureViewport, {photosets: photoSets}), document.getElementById('pictureViewport'));
 
 	});
 
@@ -87,6 +93,19 @@ function parsePhotoSets(callback) {
     for (var photoset in data) {
     	// console.log(photoset.links);
     }
+
+    callback(data);
+  })
+  .error(function(jqXHR, textStatus, errorThrown) {
+      console.log("error " + textStatus);
+      console.log("incoming Text " + jqXHR.responseText);
+  });
+}
+
+function parseLocationInfo(callback) {
+
+  $.getJSON("./Data/locationInfo.json", function( data ) {
+    console.log("parsed number of locatin Infos " + Object.keys(data).length);
 
     callback(data);
   })

@@ -407,7 +407,6 @@ hr {
   }
 
   .bottomArrow {
-    position: absolute;
     text-align: center;
     display: inline-block;
     width: 4em;
@@ -445,8 +444,10 @@ hr {
   #pictureViewport {
     height:100vh;
   }
+
   #map {
     height: 85vh;
+    width: 45%;
     margin-top: 15vh;
   }
 
@@ -463,6 +464,62 @@ hr {
     height: 40px;
     width: 45%;
     max-width: 960px;
+  }
+
+  #overlay { /* we set all of the properties for are overlay */
+    height:100%;
+    width:100%;
+    position: absolute;
+    margin:0 auto;
+    background: rgba(125,125,125,0.7);
+  }
+
+  #overlayBox { /* we set all of the properties for are overlay */
+    max-height:80%;
+    overflow: scroll;
+    overflow-x: hidden;
+    width:80%;
+    margin:0 auto;
+    background: rgba(125,125,125,0.8);
+    color:black;
+    padding:10px;
+    position:absolute;
+    top:5%;
+    left:10%;
+    z-index:1000;
+    /* CSS 3 */
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -o-border-radius:10px;
+    border-radius:10px;
+  }
+
+  #overlayBox::-webkit-scrollbar {
+    width: 1em;
+    margin: 5px;
+
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -o-border-radius:10px;
+    border-radius:10px;
+  }
+
+  #overlayBox::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -o-border-radius:10px;
+    border-radius:10px;
+  }
+
+  #overlayBox::-webkit-scrollbar-thumb {
+    background-color: black;
+
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -o-border-radius:10px;
+    border-radius:10px;
   }
 
    /* PictureViewport
@@ -506,4 +563,24 @@ hr {
   padding: 1px;
   text-align: left;
   border-radius: 0px;
+}
+
+/* links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#mapLink .bottomArrow{
+  position: absolute;
+}
+
+#photoBrowserLink {
+
+}
+
+/* photo browser
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#photoBrowser {
+  background-color: rgb(200,200,200);
+  height: 100vh;
+  margin-top: 0vh;
 }

@@ -1,5 +1,8 @@
 var locations = [];
 var photoSets = [];
+
+var locationInfo = [];
+
 var map;
 
 var circleGroups = {};
@@ -8,10 +11,11 @@ var circleLocations = {};
 var clickedPolygon;
 var clickedPolygonMarker;
 
-function initMap(parsedLocations,parsedPhotoSets) { 
+function initMap(parsedLocations,parsedPhotoSets,parseLocationInfos) { 
 
   locations = parsedLocations;
   photoSets = parsedPhotoSets;
+  locationInfo = parseLocationInfos;
 
   var southWest = L.latLng(37.88905008, -11.01074219),
       northEast = L.latLng(61.60639637, 52),
@@ -61,7 +65,7 @@ function addMarkerToMap() {
 
       }
 
-      var hexColor = '#0015FF';
+      var hexColor = '#0015FF';      
 
       var initialRadius = 1200;
       var mouseoverRadius = 15000;
@@ -126,7 +130,9 @@ function markerOnClick(e){
   var photoSetID = e.target.photoSetID;
   mapDidSelectLocation(photoSetID);
 
-  console.log("circles");  
+  console.log("e", e.target); 
+
+  console.log("circles, photosetID", e.target.photoSetID);  
   console.log(e.target.circles);
 
   if (clickedPolygon) {
@@ -142,6 +148,19 @@ function markerOnClick(e){
   var mapDistance = mapBoundNorthEast.distanceTo(map.getCenter());
 
   clickedPolygonMarker = L.marker(clickedPolygon.getBounds().getCenter()).addTo(map);
+
+  var locationInfoText = "";
+
+  if (locationInfo[e.target.photoSetID]) {
+
+    console.log(locationInfo[e.target.photoSetID]["locationInfo"]);
+    locationInfoText = locationInfo[e.target.photoSetID]["locationInfo"];
+
+  };
+
+
+  clickedPolygonMarker.bindPopup("<p>" + e.target.photoSet["unitdate"] + ", " + e.target.photoSet["unittitle"] + "<p> </br>" + locationInfoText, {'offset': L.point(0,-40),'closeButton':false,'maxWidth':300,'maxHeight':300});
+  clickedPolygonMarker.openPopup();
 
   map.setView(clickedPolygonMarker.getLatLng(), map.getZoom());
 
@@ -161,8 +180,7 @@ function markerOnClick(e){
 }
 
 function addSlider(){
-  $('#App').append("<div id='slider'></div>");
-  $('#App').append("<div id='slider2'></div>");
+  $('#container').append("<div id='slider'></div>");
 
   $("#slider").rangeSlider({
                             bounds:{min: 1916, max: 1945},
