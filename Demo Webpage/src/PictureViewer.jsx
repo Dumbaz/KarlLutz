@@ -14,7 +14,10 @@ var MasonryMixin = function(reference, options) {
 
         initializeMasonry: function(force) {
             if (!this.masonry || force) {
-                this.masonry = new Masonry(this.refs[reference].getDOMNode(), options);
+                this.masonry = new Masonry(
+                	this.refs[reference].getDOMNode(), 
+                	options
+                );
                 this.domChildren = this.getNewDomChildren();
             }
         },
@@ -117,9 +120,37 @@ var Photo = React.createClass({
 		show: React.PropTypes.bool.isRquired
 	},
 
+	getInitialState: function () {
+    return {
+      loaded: false  
+    };
+	},
+
+	onLoaded: function() {
+		this.setState({loaded: true});
+	},
+
 	render: function() {
-		var link = (this.props.show) ? this.props.image.sizes.Medium.source : '';
-		return <div className="photo" onClick={this.props.onClick} ><img src={link} /></div>;
+		var image, classes, cx; 
+
+		image = this.props.image.sizes.Medium;
+
+		var link = (this.props.show) ? image.source : '';
+
+		cx = React.addons.classSet;
+		var classes = cx({
+			'photo': true,
+			'loaded': this.state.loaded
+		});
+
+		return (
+			<div className={classes} onClick={this.props.onClick}>
+				<img 
+					src={link}
+					width={image.width} 
+					height={image.height} />
+			</div>
+		);
 	}
 
 });
@@ -132,13 +163,55 @@ var PhotoSet = React.createClass({
 	},
 
 	mixins: [
-		MasonryMixin('photos', {})
+		MasonryMixin('photos', {
+			itemSelector: '.photo', 
+			isInitLayout: true
+		})
 	],
 
 	getInitialState: function () {
-	    return {
-	        showPhotoBox: false  
-	    };
+    return {
+  		loadedPhotos: [],
+  		preloaded: false,
+      showPhotoBox: false  
+    };
+	},
+
+	componentDidMount: function () {
+		if (this.props.isCurrent) {
+			this.preload();
+		}
+	},
+
+	componentDidUpdate: function() {
+		if (this.props.isCurrent && !this.state.preLoaded) {
+			this.preload();
+		}
+	},
+
+	preload: function() {
+		var arr = [];
+
+		this.setState({preLoaded: true});
+
+	  $.each(this.props.photoset.images, function(i,photo) {
+	  	
+	  	if (!photo.rearSide && photo.sizes.Medium) {
+		  	var img = new Image();
+		  	img.onload = function() { 
+		  		this.handleImageLoad.call(this, photo);
+		  	}.bind(this);
+		  	img.src = photo.sizes.Medium.source;
+			}
+
+	  }.bind(this));
+
+	},
+
+	handleImageLoad: function(photo) {
+		var loadedPhotos = this.state.loadedPhotos;
+		loadedPhotos.push(photo);
+		this.setState({loadedPhotos: loadedPhotos});
 	},
 
 	handleClick: function(e) {
@@ -161,14 +234,13 @@ var PhotoSet = React.createClass({
 	},
 
 	render: function() {
-		var self = this,
-				cx = React.addons.classSet;
+		var cx = React.addons.classSet;
 
-		var photos = $.map(this.props.photoset.images, function(img,k) {
-			if (!img.rearSide) {
-				return <Photo key={k} show={self.props.isCurrent} image={img} onClick={self.handleClick} />;
+		var photos = $.map(this.state.loadedPhotos, function(img,k) {
+			if (!img.rearSide && img.sizes.Medium) {
+				return <Photo key={k} show={this.props.isCurrent} image={img} onClick={this.handleClick} />;
 			}
-		});
+		}.bind(this));
 
 		var setClasses = cx({
 			'photoset': true,
@@ -181,16 +253,11 @@ var PhotoSet = React.createClass({
 			'position': 'absolute',
 			'width': '100%',
 			'height': '100vh',
-			'padding': '2%',
 			'zIndex': 10
 		};
 		
 		return (
 			<div className={setClasses} styles="position:relative">
-				<div class="description">
-					<p>{this.props.photoset.unitdate}</p>
-					<p>{this.props.photoset.unittitle}</p>
-				</div>
 				<div className="photoBox" ref="photoBox" style={photoBoxStyles}>
 					<a className="close" onClick={this.removePhotoBox}>Close</a>
 				</div>
