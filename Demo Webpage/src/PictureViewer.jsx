@@ -130,6 +130,11 @@ var Photo = React.createClass({
 		this.setState({loaded: true});
 	},
 
+	handleClick: function(e) {
+		e.preventDefault();
+		this.props.displayFn(this.props.image);
+	},
+
 	render: function() {
 		var image, classes, cx; 
 
@@ -144,7 +149,7 @@ var Photo = React.createClass({
 		});
 
 		return (
-			<div className={classes} onClick={this.props.onClick}>
+			<div className={classes} onClick={this.handleClick}>
 				<img 
 					src={link}
 					width={image.width} 
@@ -214,17 +219,25 @@ var PhotoSet = React.createClass({
 		this.setState({loadedPhotos: loadedPhotos});
 	},
 
-	handleClick: function(e) {
-		e.preventDefault();
-		this.displayPhotoBox(e.target.src);
-	},
-
-	displayPhotoBox: function(link) {
+	displayPhotoBox: function(photo) {
 		var img,
+				width = parseInt(photo.sizes.Large.width),
+				height = parseInt(photo.sizes.Large.height),
 				display = this.refs.photoBox.getDOMNode();
+		
 		img = document.createElement('img');
-		img.src = link;
+		img.src = photo.sizes.Large.source;
+		
+		// Change with based on photo orientation.
+		if ( width > height ) {
+			img.style.width = '85%'; 
+		} else {
+			img.style.width = '50%';
+		}
+		
+		img.classList.add('loupe');
 		display.appendChild(img);
+		$('.photoBox img').loupe({});
 		this.setState({showPhotoBox: !this.state.showPhotoBox});
 	},
 
@@ -238,7 +251,7 @@ var PhotoSet = React.createClass({
 
 		var photos = $.map(this.state.loadedPhotos, function(img,k) {
 			if (!img.rearSide && img.sizes.Medium) {
-				return <Photo key={k} show={this.props.isCurrent} image={img} onClick={this.handleClick} />;
+				return <Photo key={k} show={this.props.isCurrent} image={img} displayFn={this.displayPhotoBox} />;
 			}
 		}.bind(this));
 
@@ -262,7 +275,7 @@ var PhotoSet = React.createClass({
 					<a className="close" onClick={this.removePhotoBox}>Close</a>
 				</div>
 				<div className="photos" ref="photos">
-					{photos}
+					{!this.state.showPhotoBox ? photos : null}
 				</div>
 			</div>
 		);
