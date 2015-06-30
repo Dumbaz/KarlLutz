@@ -405,6 +405,10 @@ function showOverlayImage(photoLink, description, photoObject) {
     removeImageContainer();
   });
 
+  save.addEventListener('click', function(e){
+    savePhotoObject(photoObject);
+  });
+
 }
 
 // Helper functions

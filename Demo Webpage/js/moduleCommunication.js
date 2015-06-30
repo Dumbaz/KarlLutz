@@ -8,6 +8,9 @@ window.onpageshow = function() {
 }
 
 window.onload = function() {
+
+
+
 	console.log("onload");
 	async.parallel([
 
@@ -127,4 +130,36 @@ function mapDidSelectLocation(photoSetID) {
 
 function pictureViewportDidSelectLocation(location) {
 
+}
+
+var localStorageName = "savedPhotoObjects";
+
+function savePhotoObject(photoObject) {
+	var photoObjects = JSON.parse(window['localStorage'].getItem(localStorageName));	
+
+	if (!photoObjects) {
+		photoObjects = [photoObject];
+	}else{
+		photoObjects.push(photoObject);
+	};
+
+	window['localStorage'].setItem(localStorageName,JSON.stringify(photoObjects));
+
+	var photoObjects = JSON.parse(window['localStorage'].getItem(localStorageName));	
+}
+
+function getSavedPhotoObjects() {
+
+	var savedPhotoObjects = [];
+
+
+	return savedPhotoObjects;
+}
+
+function supports_html5_storage() {
+  try {
+    return 'localStorage' in window && window['localStorage'] !== null;
+  } catch (e) {
+    return false;
+  }
 }
