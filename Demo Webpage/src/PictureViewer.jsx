@@ -221,12 +221,16 @@ var PhotoSet = React.createClass({
 
 	displayPhotoBox: function(photo) {
 		var img,
-				width = parseInt(photo.sizes.Large.width),
-				height = parseInt(photo.sizes.Large.height),
+				width = parseInt(photo.sizes.Medium.width),
+				height = parseInt(photo.sizes.Medium.height),
 				display = this.refs.photoBox.getDOMNode();
 		
 		img = document.createElement('img');
-		img.src = photo.sizes.Large.source;
+		if ( !photo.sizes.Large ) {
+			img.src = photo.sizes.Medium.source;
+		} else { 
+			img.src = photo.sizes.Large.source;
+		}
 		
 		// Change with based on photo orientation.
 		if ( width > height ) {
