@@ -48,7 +48,7 @@ window.onload = function() {
 		});
 		photoSets = arr;	
 
-		// React.render(React.createElement(PictureViewport, {photosets: photoSets}), document.getElementById('pictureViewport'));
+		React.render(React.createElement(PictureViewport, {photosets: photoSets}), document.getElementById('pictureViewport'));
 
 	});
 
