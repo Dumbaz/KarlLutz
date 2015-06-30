@@ -14,6 +14,9 @@ var force,svg,g;
 var circle1,circle2;
 var link,node;
 
+var photoSetColor = '#fd8d3c';
+var yearColor = '#c6dbef';
+
 function init() {
 
   width = $(window).width();
@@ -32,24 +35,28 @@ function init() {
 
   g = svg.append("g");
 
-  // "#3182bd" // collapsed package
-  //       : d.children ? "#c6dbef" // expanded package
-  //       : "#fd8d3c"; // leaf node
-
-
   circle1 = svg.append("circle")
                   .attr('class', 'node')
                   .attr('transform', "translate(40,40)")
                   .attr('r', 20)
-                  .style("fill", '#fd8d3c');
+                  .style("fill", photoSetColor);
+
+  var text1 = svg.append("text")
+                  .attr('transform', "translate(80,45)")
+                  .text("Anzahl der Photos pro Verzeichnis")
+                  .style("fill", "black");
 
   circle2 = svg.append("circle")
                   .attr('class', 'node')
                   .attr('transform', "translate(40,90)")
                   .attr('r', 20)
-                  .style("fill", '#c6dbef');
+                  .style("fill", yearColor);
 
-  circle1.fixed = true;
+  var text2 = svg.append("text")
+                  .attr('transform', "translate(80,95)")
+                  .text("Jahr")
+                  .style("fill", "black");
+
 
   link = g.selectAll(".link");
   node = g.selectAll(".node");
@@ -63,16 +70,12 @@ function showPhotoNetwork(data) {
 
   var year_sorted_photosets = [];
 
-  console.log("number of photosets in showPhotoNetwork" + data.length);
-
   for (var key in data) {
 
     var photoset = data[key];
     photoset.name = photoset["unittitle"];
     photoset.photosetID = key;
     
-    if (!photoset["unitdate-normal"]) {console.log(photoset);console.log(key)};
-
     var year = photoset["unitdate-normal"].split("/")[0].split("-")[0];
 
     if (year_sorted_photosets[year]) {
@@ -213,8 +216,6 @@ function update() {
       .style("fill", color);
 
   node.on('mouseover', function(d) {
-
-    console.log("mouseover");
     
     node.select("image").transition(200)
     .attr('width', function (n){
@@ -260,7 +261,7 @@ function tick() {
 function color(d) {
   return d._children ? "#3182bd" // collapsed package
       : d.children ? "#c6dbef" // expanded package
-      : "#fd8d3c"; // leaf node
+      : photoSetColor; // leaf node
 }
 
 // Toggle children on click.
@@ -270,7 +271,7 @@ function click(d) {
 
   //Open overlay Image Viewer on click on photonode
   if (d.src) {
-    showOverlayImage(d.srcLarge ? d.srcLarge : d.src, d.photoSetDescription);
+    showOverlayImage(d.srcLarge ? d.srcLarge : d.src, d.photoSetDescription,d.photoObject);
     return;
   };
 
@@ -312,7 +313,7 @@ function click(d) {
 
         var htmllinkLarge = htmllink;
 
-        var photoSetDescription = photoset["unittitle"];
+        var photoSetDescriptionText = photoset["unittitle"];
 
         if (image["id"]) {
           htmllinkLarge = image["id"];
@@ -320,7 +321,19 @@ function click(d) {
 
         // var htmllinkLarge = image["sizes"]["Large"]["source"];
 
-        var n = {parent:d.id,id:"p"+nodes.length+1,src: htmllink,href: htmllink,srcLarge: htmllinkLarge,hrefLarge: htmllinkLarge,type: "photoNode",srcWidth: parseFloat(width),srcHeight: parseFloat(height),"photoSetDescription": photoSetDescription};
+        var n = {parent:d.id,
+                  id:"p"+nodes.length+1,
+                  src: htmllink,
+                  href: htmllink,
+                  srcLarge: htmllinkLarge,
+                  hrefLarge: htmllinkLarge,
+                  type: "photoNode",
+                  srcWidth: parseFloat(width),
+                  srcHeight: parseFloat(height),
+                  photoSetDescription: photoSetDescriptionText,
+                  photoObject: image
+                };
+
         var link = {source:d, target:n, type: "photoNodeLink"};
 
         nodes.push(n);
@@ -338,14 +351,10 @@ function click(d) {
   update();
 }
 
-function showOverlayImage(photoLink, description) {
+function showOverlayImage(photoLink, description, photoObject) {
 
   var imgContainer = document.createElement("div");
   imgContainer.className = "imageContainer";
-
-  // var desc = document.createElement("div");
-  // img.id = "photo";
-  // img.className = "photoImage";
 
   var img = document.createElement("img");
   img.src = photoLink;
@@ -359,7 +368,13 @@ function showOverlayImage(photoLink, description) {
   close.id = "photoClose";
   close.className = "closeImage";  
 
-  // imgContainer.appendChild(close);
+  imgContainer.appendChild(close);
+
+  var descriptionText = document.createTextNode(description);
+  descriptionText.color = "white";
+  descriptionText.className = "photoDescription";
+
+  imgContainer.appendChild(descriptionText);
 
   $("#photoNetwork").append(imgContainer);
 
@@ -368,9 +383,17 @@ function showOverlayImage(photoLink, description) {
     // height: 150, // height of magnifier
   });
 
-  imgContainer.addEventListener('click', function(e){
+  function removeImageContainer() {
     imgContainer.remove();
     $('.loupe').remove();
+  }
+
+  close.addEventListener('click', function(e){
+    removeImageContainer();
+  });
+
+  imgContainer.addEventListener('click', function(e){
+    removeImageContainer();
   });
 
 }
