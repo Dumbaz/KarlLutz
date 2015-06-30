@@ -151,6 +151,7 @@ var Photo = React.createClass({displayName: "Photo",
 		return (
 			React.createElement("div", {className: classes, onClick: this.handleClick}, 
 				React.createElement("img", {
+					className: "photo-thumb", 
 					src: link, 
 					width: image.width, 
 					height: image.height})
@@ -241,13 +242,20 @@ var PhotoSet = React.createClass({displayName: "PhotoSet",
 		
 		img.classList.add('loupe');
 		display.appendChild(img);
-		$('.photoBox img').loupe({});
-		this.setState({showPhotoBox: !this.state.showPhotoBox});
+		$('.photoBox .photo-thumb').loupe({});
+		this.setState({showPhotoBox: photo});
 	},
 
 	removePhotoBox: function() {
 		this.refs.photoBox.getDOMNode().childNodes[1].remove();
 		this.setState({showPhotoBox: !this.state.showPhotoBox});
+	},
+
+	saveImage: function() {
+		console.log('PhotoSet::saveImage() saving: ', this.state.showPhotoBox);
+		if (!this.state.showPhotoBox) return;
+		savePhotoObject(this.state.showPhotoBox);
+		console.log(window['localStorage'].getItem('savedPhotoObjects'));
 	},
 
 	render: function() {
@@ -276,7 +284,8 @@ var PhotoSet = React.createClass({displayName: "PhotoSet",
 		return (
 			React.createElement("div", {className: setClasses, styles: "position:relative"}, 
 				React.createElement("div", {className: "photoBox", ref: "photoBox", style: photoBoxStyles}, 
-					React.createElement("a", {className: "close", onClick: this.removePhotoBox}, "Close")
+					React.createElement("a", {className: "close", onClick: this.removePhotoBox}, "Close"), 
+					React.createElement("a", {className: "save", onClick: this.saveImage}, React.createElement("img", {className: "saveImage", src: "/Data/save.svg"}))
 				), 
 				React.createElement("div", {className: "photos", ref: "photos"}, 
 					!this.state.showPhotoBox ? photos : null
