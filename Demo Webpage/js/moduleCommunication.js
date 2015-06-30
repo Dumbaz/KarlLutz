@@ -34,7 +34,11 @@ window.onload = function() {
 		photoSets = results[1];
 		locationInfos = results[2];
 
+		//add map
 		initMap(locations, photoSets, locationInfos);
+
+		//add photo network
+		showPhotoNetwork(photoSets);
 
 		// Convert photosets object to an array.
 		var arr = [];
@@ -46,8 +50,7 @@ window.onload = function() {
 			var idx = parseInt(k.split('_')[1])-1;
 			arr.splice(idx, 1, v);
 		});
-		photoSets = arr;	
-
+		photoSets = arr;
 		React.render(React.createElement(PictureViewport, {photosets: photoSets}), document.getElementById('pictureViewport'));
 
 	});

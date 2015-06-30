@@ -558,11 +558,56 @@ hr {
 
 }
 
-/* photo browser
+/* photo network
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 #photoNetwork {
   background-color: rgb(200,200,200);
   height: 100vh;
   margin-top: 0vh;
+}
+
+.imageContainer {
+  position: absolute;
+  top: 0;
+  background: black;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.photoImage {
+  position: absolute;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  margin-right: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.loupe { 
+  background-color:#555; 
+  background:rgba(0, 0, 0, 0.25); 
+  border:5px solid rgba(0, 0, 0, 0); 
+  cursor:url(blank.png), url(blank.cur), none; 
+  z-index: 3;
+}
+
+.node circle {
+  cursor: pointer;
+  stroke: #3182bd;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 10px sans-serif;
+  pointer-events: none;
+  text-anchor: middle;
+}
+
+line.link {
+  fill: none;
+  stroke: #9ecae1;
+  stroke-width: 1.5px;
 }
