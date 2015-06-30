@@ -9,7 +9,20 @@ window.onpageshow = function() {
 
 window.onload = function() {
 
+	var savedPhotoObjects = getSavedPhotoObjects();
 
+	if (savedPhotoObjects) {
+		$("#startPage").append("<img src=/Data/save.svg class=savedPhotos>").on('click',function(){
+			$('.saved-browser').show('slide', {direction: 'right'}, 500);
+
+			$.each(savedPhotoObjects, function(id,photoObject) {
+
+				var link = photoObject.sizes.Medium.source;
+				$('.saved-browser').append("<img src=" + link + " class=savedPhotoImages>");
+				
+			});
+		});
+	};
 
 	console.log("onload");
 	async.parallel([
@@ -145,15 +158,14 @@ function savePhotoObject(photoObject) {
 
 	window['localStorage'].setItem(localStorageName,JSON.stringify(photoObjects));
 
-	var photoObjects = JSON.parse(window['localStorage'].getItem(localStorageName));	
+	var photoObjects = JSON.parse(window['localStorage'].getItem(localStorageName));
 }
 
 function getSavedPhotoObjects() {
 
-	var savedPhotoObjects = [];
-
-
+	var savedPhotoObjects = JSON.parse(window['localStorage'].getItem(localStorageName));
 	return savedPhotoObjects;
+
 }
 
 function supports_html5_storage() {

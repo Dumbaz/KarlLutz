@@ -641,12 +641,37 @@ hr {
   border-radius: 25px;
 }
 */
+
+.savedPhotos {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.savedPhotoImages {
+  width: 80%;
+
+}
+
 .saveImage {
   width: 50px;
   height: 50px;
   margin: 10px;
   margin-top: 80
   float: left;
+}
+
+.saved-browser {
+  display:none;
+  position: absolute;
+  top: 0; right: 0;
+  width: 15%;
+  height: 100vh;
+  background-color: white;
+  overflow: auto;
 }
 
 .photoDescription {
