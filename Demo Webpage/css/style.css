@@ -602,11 +602,32 @@ hr {
   cursor:url(blank.png), url(blank.cur), none; 
   z-index: 30;
 }
+
 .closeImage {
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
   margin: 10px;
   float: right;
+}
+
+/*.closeImage:hover {
+  background-color: rgb(200,200,200);
+  border-radius: 25px;
+}
+*/
+.saveImage {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  margin-top: 80
+  float: left;
+}
+
+.photoDescription {
+  color: white;
+  height: 50px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 .node circle {

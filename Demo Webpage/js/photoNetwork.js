@@ -370,11 +370,20 @@ function showOverlayImage(photoLink, description, photoObject) {
 
   imgContainer.appendChild(close);
 
-  var descriptionText = document.createTextNode(description);
-  descriptionText.color = "white";
-  descriptionText.className = "photoDescription";
+  var save = document.createElement("img");
+  save.src = "/Data/save.svg";
+  save.id = "photoSave";
+  save.className = "saveImage";
 
-  imgContainer.appendChild(descriptionText);
+  imgContainer.appendChild(save);
+
+  var textContainer = document.createElement("div");
+  textContainer.className = "photoDescription";
+
+  var descriptionText = document.createTextNode(description);
+  textContainer.appendChild(descriptionText);
+
+  imgContainer.appendChild(textContainer);
 
   $("#photoNetwork").append(imgContainer);
 
