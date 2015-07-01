@@ -3,25 +3,33 @@ var locations;
 var photoSets = [];
 var locationInfo = [];
 
-window.onpageshow = function() {
-	console.log("onpageshow");
-}
+var savedPhotoObjects;
 
 window.onload = function() {
 
-	var savedPhotoObjects = getSavedPhotoObjects();
+	savedPhotoObjects = getSavedPhotoObjects();
 
 	if (savedPhotoObjects) {
-		$("#startPage").append("<img src=/Data/save.svg class=savedPhotos>").on('click',function(){
+		$("#startPage").append("<img src=/Data/save.svg class=savedPhotosButton>");
+
+		$(".savedPhotosButton").on('click',function(){
+
+			if ($('.saved-browser').css("display") != 'none') {
+				closeSavedPhotoBrowser();
+				return;
+			};
+
 			$('.saved-browser').show('slide', {direction: 'right'}, 500);
+			$(".savedPhotosButton").show('slide', {direction: 'right'}, 500);
 
 			$.each(savedPhotoObjects, function(id,photoObject) {
 
 				var link = photoObject.sizes.Medium.source;
 				$('.saved-browser').append("<img src=" + link + " class=savedPhotoImages>");
-				
+
 			});
 		});
+
 	};
 
 	console.log("onload");
@@ -73,7 +81,11 @@ window.onload = function() {
 
 }
 
-//test parsing
+function closeSavedPhotoBrowser () {
+	$('.saved-browser').hide('slide', {direction: 'right'}, 500 , function(){
+		$('.saved-browser').empty();	
+	});	
+}
 
 //Data type objects (prototype)
 function photoSet (photoSetID, time, location, description, photos) {
@@ -158,7 +170,8 @@ function savePhotoObject(photoObject) {
 
 	window['localStorage'].setItem(localStorageName,JSON.stringify(photoObjects));
 
-	var photoObjects = JSON.parse(window['localStorage'].getItem(localStorageName));
+	savedPhotoObjects = JSON.parse(window['localStorage'].getItem(localStorageName));
+	closeSavedPhotoBrowser();
 }
 
 function getSavedPhotoObjects() {

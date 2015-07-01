@@ -24,7 +24,7 @@ function init() {
 
   force = d3.layout.force()
     .linkDistance(10)
-    .charge(-80)
+    .charge(-90)
     .gravity(.06)
     .size([width, height])
     .on("tick", tick);
@@ -121,12 +121,15 @@ function showPhotoNetwork(data) {
       for(var key in year_sorted_photosets[year]){
         var photoset = year_sorted_photosets[year][key];
 
-        var photosetChild = {};
-        photosetChild.photosetID = photoset.photosetID;          
-        photosetChild.parent = currentChild.name;
-        photosetChild.name = photoset["numLinks"];
+        if (photoset["numLinks"] > 0) {
+          var photosetChild = {};
+          photosetChild.photosetID = photoset.photosetID;          
+          photosetChild.parent = currentChild.name;
+          photosetChild.name = photoset["numLinks"];
 
-        currentChild.children.push(photosetChild);          
+          currentChild.children.push(photosetChild);          
+        };
+
       }
 
       currentChild = currentChild.children[0];
@@ -181,18 +184,22 @@ function update() {
   nodeEnter.append("circle")
       .attr("r", function(d) { 
         if (d.src) {return 1;};
-        return Math.max(Math.sqrt(d.size)*3,13) || 5.5; 
+        return Math.max(Math.sqrt(d.size)*3,13) || 7.5; 
       });
 
   nodeEnter.append("text")
       .attr("dy", ".35em")
       .text(function(d) { return d.name; });
 
-  nodeEnter.append("svg:image")
+  nodeEnter.filter(function(d) { return d.src })
+        .append("svg:image")
         .attr('class','nodeImage')
         .attr('x',-9)
         .attr('y',-12)
         .attr('width', function(d){
+
+          if (!d.srcWidth || !d.srcHeight) {return 0};
+
           if (d.srcWidth > d.srcHeight) {
             return 20;
           }else{
@@ -201,6 +208,9 @@ function update() {
           };
         })
         .attr('height', function(d){
+
+          if (!d.srcWidth || !d.srcHeight) {return 0};
+
           if (d.srcWidth < d.srcHeight) {
             return 24;
           }else{
@@ -216,7 +226,7 @@ function update() {
       .style("fill", color);
 
   node.on('mouseover', function(d) {
-    
+
     node.select("image").transition(200)
     .attr('width', function (n){
       if (d.id === n.id) { return 200 } else { return 20 };
@@ -271,7 +281,7 @@ function click(d) {
 
   //Open overlay Image Viewer on click on photonode
   if (d.src) {
-    showOverlayImage(d.srcLarge ? d.srcLarge : d.src, d.photoSetDescription,d.photoObject);
+    showOverlayImage(d.srcLarge ? d.srcLarge : d.src, d.photoSetDescription,d.photoObject,d.photoSet);
     return;
   };
 
@@ -284,11 +294,6 @@ function click(d) {
   //deselect
   if (selectedNode === d) {
     selectedNode = null;
-
-    // g.transition()
-    //       .duration(750)
-    //       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + 1 + ")translate(" + -d.x + "," + -d.y + ")");
-
     update();    
     return;
   };
@@ -327,6 +332,7 @@ function click(d) {
                   href: htmllink,
                   srcLarge: htmllinkLarge,
                   hrefLarge: htmllinkLarge,
+                  photoSet:  photoset,
                   type: "photoNode",
                   srcWidth: parseFloat(width),
                   srcHeight: parseFloat(height),
@@ -344,17 +350,29 @@ function click(d) {
 
   };
 
-  // g.transition()
-  //     .duration(750)
-  //     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + 2 + ")translate(" + -d.x + "," + -d.y + ")");
-
   update();
 }
 
-function showOverlayImage(photoLink, description, photoObject) {
+function showOverlayImage(photoLink, description, photoObject, photoSet) {
+
+  var currentIndex;
+
+  $.each(photoSet.images,function(k,photo){
+
+    if (photo.id === photoObject.id) {currentIndex = k};
+
+  });
+
+  var numberOfPhotos = photoSet.numLinks;
 
   var imgContainer = document.createElement("div");
   imgContainer.className = "imageContainer";
+
+  var textContainer = document.createElement("div");
+  textContainer.className = "photoDescription";
+
+  var descriptionText = document.createTextNode(description);
+  textContainer.appendChild(descriptionText);
 
   var img = document.createElement("img");
   img.src = photoLink;
@@ -370,6 +388,20 @@ function showOverlayImage(photoLink, description, photoObject) {
 
   imgContainer.appendChild(close);
 
+  var rightButton = document.createElement("img");
+  rightButton.src = "/Data/right_arrow.svg";
+  rightButton.id = "nextButton";
+  rightButton.className = "rightButton";  
+
+  imgContainer.appendChild(rightButton);
+
+  var leftButton = document.createElement("img");
+  leftButton.src = "/Data/left_arrow.svg";
+  leftButton.id = "previousButton";
+  leftButton.className = "leftButton";  
+
+  imgContainer.appendChild(leftButton);
+
   var save = document.createElement("img");
   save.src = "/Data/save.svg";
   save.id = "photoSave";
@@ -377,20 +409,14 @@ function showOverlayImage(photoLink, description, photoObject) {
 
   imgContainer.appendChild(save);
 
-  var textContainer = document.createElement("div");
-  textContainer.className = "photoDescription";
-
-  var descriptionText = document.createTextNode(description);
-  textContainer.appendChild(descriptionText);
-
   imgContainer.appendChild(textContainer);
 
   $("#photoNetwork").append(imgContainer);
 
-  $('#photo').loupe({
-    // width: 200, // width of magnifier
-    // height: 150, // height of magnifier
-  });
+  $(".imageContainer").append("<div class=photoIndex></div>");
+  $(".photoIndex").text(currentIndex + 1 + "/" + numberOfPhotos);
+
+  $('#photo').loupe({});
 
   function removeImageContainer() {
     imgContainer.remove();
@@ -401,12 +427,55 @@ function showOverlayImage(photoLink, description, photoObject) {
     removeImageContainer();
   });
 
-  imgContainer.addEventListener('click', function(e){
-    removeImageContainer();
+  save.addEventListener('click', function(e){
+    savePhotoObject(photoSet.images[currentIndex]);
   });
 
-  save.addEventListener('click', function(e){
-    savePhotoObject(photoObject);
+  leftButton.addEventListener('click', function(e){
+
+    if (currentIndex > 0) {
+      currentIndex--;
+    }else{
+      currentIndex = numberOfPhotos-1;
+    };
+
+    var sizes = photoSet.images[currentIndex].sizes;
+    var link;
+
+    if (sizes.Large) {
+      link = sizes.Large.source;
+    }else{
+      link = sizes.Medium.source;
+    };
+
+    $('.photoImage').attr("src", link);
+    $('.loupe').remove();
+    $('#photo').loupe({});
+    
+    $(".photoIndex").text(currentIndex + 1 + "/" + numberOfPhotos);
+  });
+
+  rightButton.addEventListener('click', function(e){
+
+    if (currentIndex === numberOfPhotos - 1) {
+      currentIndex = 0;
+    }else{
+      currentIndex++;
+    };
+
+    var sizes = photoSet.images[currentIndex].sizes;
+    var link;
+
+    if (sizes.Large) {
+      link = sizes.Large.source;
+    }else{
+      link = sizes.Medium.source;
+    };
+
+    $('.photoImage').attr("src", link);
+    $('.loupe').remove();
+    $('#photo').loupe({});
+    $(".photoIndex").text(currentIndex + 1 + "/" + numberOfPhotos);
   });
 
 }

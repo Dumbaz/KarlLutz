@@ -247,7 +247,7 @@ var PhotoSet = React.createClass({displayName: "PhotoSet",
 	},
 
 	removePhotoBox: function() {
-		this.refs.photoBox.getDOMNode().childNodes[1].remove();
+		this.refs.photoBox.getDOMNode().childNodes[2].remove();
 		this.setState({showPhotoBox: !this.state.showPhotoBox});
 	},
 
